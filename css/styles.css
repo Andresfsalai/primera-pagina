@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*   font-family: "Oswald", sans-serif; */
+body{
+    background-color: black;
+    font-family: "Oswald", sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.966);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+    position: sticky;
+    margin: 10px 0px;
+
+}
+
+header div{
+    width: 10%;
+}
+
+header img{
+    width: auto;
+    height: 50%;
+}
+
+nav{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    gap: 1.875rem;
+    padding-right: 10% ;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+}
+
+.botonHeader{
+    background-color: blue;
+    color: white;
+    border-width: 0;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+
+.banner{
+    width: 100%;
+    height: 600px;
+    background-image: url(../assets/images/imagepartone.jpg);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    padding-left: 9.375rem;
+}
+
+.banner h1{
+    font-size: 50px;
+}
+
+.banner p{ 
+    width: 40%;
+}
+
+.getQuoted{
+    background-color: blue;
+    padding: 10px 10px; 
+}
+
+.servButton{
+    padding: 10px 10px;
+}
+
+.boxes{
+    width: 250px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.boxes img{
+    padding: 15px 0px 0px 0px;
+    align-self: cee;
+}
+
+.boxes button{
+    background-color: blue;
+    color: white;
+    padding: 10px 10px;
+}
+
+.boxEnd button{
+    background-color: blue;
+    padding: 10px 10px;
+    margin: 10px 5px 35px 30px;
+}
+
+.boxEnd{
+    color: white;
+    padding-left: 100px;
+    text-align: center;
+}
+
+.finLanding{
+    padding: 10px 10px 10px 90px;
+    margin-top: 90px;
+    width: 100%;
+    height: 600px;
+    background-image: url(../assets/images/landingfinal.png);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 50%; 
+    background-repeat: no-repeat;
+}
+
+.finLanding h1{
+    width: 95%;
+    font-size: 40px;
+    text-align: left;
+}
+
+.finLanding p{ 
+    width: 95%;
+    text-align: left;
+}
+
+.finLanding button{
+    margin-top: 10px;
+    background-color: blue;
+    color: white;
+    padding: 10px 10px;
+}
+
+.bannerServices{
+    color: white
+}
+
+.bannerServices img{
+    width: 50%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.bannerServices h1{
+    margin-left: 710px;
+    padding: 50px 125px 10px 0px;
+    text-align: right;
+}
+
+.bannerServices p{
+    margin-left: 600px;
+    padding-left: 200px ;
+    text-align: left;
+    width: 50%;
+}
+
+.ourServices h1{
+   padding: 50px 0px 10px 0px;
+    font-size: 45px;
+    text-align: center;
+    margin: auto;
+    padding-left: 5%;
+    color: white;
+} 
+
+.ourServices p{
+    padding: 10px 0px 80px 5px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    padding-right: 10%;
+    color: white;
+}
+
+.serviceContainer{
+width: 205px;
+height: 300px;
+background-color: white;
+margin: 20px;
+border-radius: 10%
+;
+
+}
+
+.serviceContainer div{
+    width: 100%;
+    height: 200px;
+
+}
+
+.serviceContainer img{
+    padding-top: 80px;
+    padding-left: 80px;
+    object-fit: contain;
+    width:60%;
+    height: 60%;
+}
+
+.mainContainer{
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-left:300px;
+}
+
+.faqsPage{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.faqsPage h1{
+    font-size: 4rem;
+    padding: 20px 0px 30px 0px;
+}
+
+.faqsPage p{
+    font-weight: lighter;
+    padding-top: 10px;
+}
+
+.faqsContainer{
+    width: 150px;
+    height: 150px;
+    background-color: rgba(242, 238, 255, 0.356);
+    margin: 20px;
+    border-radius: 10%;
+}
+
+.faqsContainer div{
+    width: 150px;
+    height: 250px;
+
+}
+
+.faqsContainer img{
+    padding-top: 10px;
+    padding-right: 30px;
+    object-fit: contain;
+    width: 100px ;
+    height: 20%;
+}
+
+.faqsContainer h3{
+    text-align: center;
+    color: white;
+}
+
+.faqsMainContainer{
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-left:300px;
+}
+
+.aboutUsPage{
+    color: white
+}
+
+.aboutUsPage img{
+    width: 50%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.aboutUsPage h1{
+    margin-left: 710px;
+    padding: 50px 125px 10px 0px;
+    text-align: right;
+}
+
+.aboutUsPage p{
+    margin-left: 600px;
+    padding-left: 200px ;
+    text-align: left;
+    width: 50%;
+
+    }
+
+.secondAbout h1{
+    padding: 50px 0px 10px 0px;
+    font-size: 45px;
+    text-align: center;
+    margin: auto;
+    padding-left: 5%;
+    color: white;
+    } 
+
+.secondAbout p{
+    padding: 10px 0px 80px 5px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    padding-right: 10%;
+    color: white;      
+    }   
+
+    .secondAbout img{
+        width: 60%;
+        height: 500px; 
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 250px;
+        padding: 50px 100px 0px 100px;
+    }
+
+.contactUs{
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+
+.contactUs h1{
+    font-size: 64px;
+    text-align: left;
+    padding: 15px;
+}
+
+.contactUs p{
+    font-weight: lighter;
+    text-align: left;
+    width: 40%;
+}
+
+.infoContainer{
+    width: 205px;
+    height: 300px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10%
+    ;
+    
+    }
+    
+    .infoContainer div{
+        width: 100%;
+        height: 200px;
+    
+    }
+    
+    .infoContainer img{
+        padding-top: 80px;
+        padding-left: 100px;
+        object-fit: contain;
+        width:60%;
+        height: 60%;
+    }
+
+    .mainInfoContainer{
+        display: flex;
+        width: 70%;
+        flex-direction: row;
+        flex-direction: row-reverse;
+        justify-content: right;
+        text-align: center;
+        padding-left:400px;
+    }
+
