@@ -1,397 +1,684 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/*   font-family: "Oswald", sans-serif; */
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*   font-family: "Oswald", sans-serif; */
+
 body{
+    font-family: "Oswald", sans-serif;
     background-color: black;
-    font-family: "Oswald", sans-serif;
-}
-
-header{
-    width: 100%;
-    height: 80px;
-    background-color: rgba(0, 0, 0, 0.966);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10%;
-    position: sticky;
-    margin: 10px 0px;
-
-}
-
-header div{
-    width: 10%;
-}
-
-header img{
-    width: auto;
-    height: 50%;
-}
-
-nav{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar{
-    display: flex;
-    list-style: none;
-    gap: 1.875rem;
-    padding-right: 10% ;
-}
-
-.navbar li a{
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
-}
-
-.botonHeader{
-    background-color: blue;
-    color: white;
-    border-width: 0;
-    font-family: "Oswald", sans-serif;
-    font-size: 1.5rem;
-    padding: 3px 10px;
-    border-radius: 10px;
-}
-
-.banner{
-    width: 100%;
-    height: 600px;
-    background-image: url(../assets/images/imagepartone.jpg);
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    padding-left: 9.375rem;
-}
-
-.banner h1{
-    font-size: 50px;
-}
-
-.banner p{ 
-    width: 40%;
-}
-
-.getQuoted{
-    background-color: blue;
-    padding: 10px 10px; 
-}
-
-.servButton{
-    padding: 10px 10px;
-}
-
-.boxes{
-    width: 250px;
-    height: 300px;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    border-radius: 10%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-
-.boxes img{
-    padding: 15px 0px 0px 0px;
-    align-self: cee;
-}
-
-.boxes button{
-    background-color: blue;
-    color: white;
-    padding: 10px 10px;
-}
-
-.boxEnd button{
-    background-color: blue;
-    padding: 10px 10px;
-    margin: 10px 5px 35px 30px;
-}
-
-.boxEnd{
-    color: white;
-    padding-left: 100px;
-    text-align: center;
-}
-
-.finLanding{
-    padding: 10px 10px 10px 90px;
-    margin-top: 90px;
-    width: 100%;
-    height: 600px;
-    background-image: url(../assets/images/landingfinal.png);
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    padding-left: 50%; 
+    background-image: url("../assets/images/bg.PNG");
+    background-size: cover;
+    background-position:center;
     background-repeat: no-repeat;
 }
 
-.finLanding h1{
-    width: 95%;
-    font-size: 40px;
-    text-align: left;
-}
-
-.finLanding p{ 
-    width: 95%;
-    text-align: left;
-}
-
-.finLanding button{
-    margin-top: 10px;
-    background-color: blue;
-    color: white;
-    padding: 10px 10px;
-}
-
-.bannerServices{
-    color: white
-}
-
-.bannerServices img{
-    width: 50%;
-    height: 350px;
+header{
+    background-color: rgb(12, 12, 12);
     display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: 80px; 
+    position: sticky;
+    top: 0;
+    gap: 10%;
+    padding: 10px 80px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.247);
+
+}
+
+header img{
+    width: 100%;
+    height: 100%x;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    gap: 20%;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.navbar{ 
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
     
 }
 
-.bannerServices h1{
-    margin-left: 710px;
-    padding: 50px 125px 10px 0px;
-    text-align: right;
-}
-
-.bannerServices p{
-    margin-left: 600px;
-    padding-left: 200px ;
-    text-align: left;
-    width: 50%;
-}
-
-.ourServices h1{
-   padding: 50px 0px 10px 0px;
-    font-size: 45px;
-    text-align: center;
-    margin: auto;
-    padding-left: 5%;
+nav li a{
+    display: flex;
+    font-size: 1.5rem;
     color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.bnav{
+    background-color: blue;
+    font-size: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.bnav:hover {
+    background-color: rgba(0, 30, 197, 0.582);
+    }
+
+.bannerPrincipal{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0px;
 } 
 
-.ourServices p{
-    padding: 10px 0px 80px 5px;
-    font-size: 20px;
-    text-align: center;
-    margin: auto;
-    width: 90%;
-    padding-right: 10%;
-    color: white;
-}
-
-.serviceContainer{
-width: 205px;
-height: 300px;
-background-color: white;
-margin: 20px;
-border-radius: 10%
-;
-
-}
-
-.serviceContainer div{
-    width: 100%;
-    height: 200px;
-
-}
-
-.serviceContainer img{
-    padding-top: 80px;
-    padding-left: 80px;
-    object-fit: contain;
-    width:60%;
-    height: 60%;
-}
-
-.mainContainer{
-    display: flex;
-    width: 70%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    padding-left:300px;
-}
-
-.faqsPage{
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.faqsPage h1{
+.bannerPrincipal h1{
     font-size: 4rem;
-    padding: 20px 0px 30px 0px;
 }
 
-.faqsPage p{
+.bannerPrincipal p{
+    font-size: 1.5rem;
     font-weight: lighter;
-    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.faqsContainer{
-    width: 150px;
-    height: 150px;
-    background-color: rgba(242, 238, 255, 0.356);
-    margin: 20px;
-    border-radius: 10%;
-}
-
-.faqsContainer div{
-    width: 150px;
-    height: 250px;
-
-}
-
-.faqsContainer img{
-    padding-top: 10px;
-    padding-right: 30px;
-    object-fit: contain;
-    width: 100px ;
-    height: 20%;
-}
-
-.faqsContainer h3{
-    text-align: center;
-    color: white;
-}
-
-.faqsMainContainer{
-    display: flex;
-    width: 70%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    padding-left:300px;
-}
-
-.aboutUsPage{
-    color: white
-}
-
-.aboutUsPage img{
-    width: 50%;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
+.bannerText{
+    color: white; 
+    padding: 25px 15px 0px 90px; 
     
 }
 
-.aboutUsPage h1{
-    margin-left: 710px;
-    padding: 50px 125px 10px 0px;
+.botonPresentacion{
+    background-color: blue;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.s;
+}
+
+.botonPresentacion:hover {
+    background-color: rgba(0, 30, 197, 0.582);
+    }
+
+.botonServiciosIndex {
+    background-color: transparent; 
+    color: white; 
+    font-size: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    padding: 3px 10px;
+    margin-top: 15px;
+    margin-left: 10px;
+    border: 2px solid rgb(255, 255, 255); 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.2s;
+}
+
+.botonServiciosIndex:hover {
+    background-color: rgba(182, 182, 182, 0.253);
+    }
+
+.tituloBannerSecundario{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: .3125rem;
+    color: white;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.decoUnoIndex{
+    background-color: blue;
+    padding: 0px 8px;
+    border-radius: 10px;
+}
+
+.decoDosIndex{
+    background-color: blue;
+    padding: 0px 8px;
+    border-radius: 10px;
+}
+
+.cajasBanner {
+    display: flex; 
+    justify-content: center; 
+    padding: 30px; 
+    color: white;
+    gap: 3.125rem;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.cajaUno{
+    width: 20%; 
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.cajaDos{
+    width: 20%;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.cajaTres{
+    width: 20%;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.cajaUno img{
+    margin: 20px 0px;
+    width: 50px; 
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+.cajaDos img{
+    margin: 20px 0px;
+    width: 50px; 
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+.cajaTres img{
+    margin: 20px 0px;
+    width: 50px; 
+    height: auto; 
+    margin-bottom: 10px; 
+}
+
+.cajasBanner button {
+    background-color: blue; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 60px;
+    font-family: "Oswald", sans-serif;
+    font-weight: .1875rem;
+    font-size: 16px;
+}
+
+.cajasBanner button:hover {
+    background-color: rgba(0, 30, 197, 0.582);
+}
+
+.textoPostCajas{
+    margin: 20px 100px;
+    text-align: center;
+    color: white;
+}
+
+.postCaja {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;     
+    margin: 20px 0;       
+} 
+
+.postCaja button{
+    background-color: blue; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+    font-weight: .1875rem;
+    font-size: 1.5rem;
+}
+
+.postCaja button:hover{
+    background-color: rgba(0, 30, 197, 0.582);
+}
+
+.postCaja p{
+    color: white;
+    padding: 20px 100px;
+    font-weight: lighter;
+    font-size: 1.5rem;
+
+}
+
+.landingFinal{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: 100px 100px 0px 100px; 
+    color: white;
+}
+
+.landingFinal img{
+    border-radius: 50px;
+    width: 100%;
+    height: 75%;
+    border-radius: 30px;
+    border: 5px solid rgba(255, 255, 255, 0.856);
+}
+
+.landingFinal h1{
+    font-size: 3.375rem;
+    margin-top: 50px;
+}
+
+.landingFinal p{
+    padding: 20px 10px 20px 0px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.landingFinal button{
+    background-color: blue; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+    font-weight: .1875rem;
+    font-size: 1.5rem;
+}
+
+.landingFinal button:hover{
+    background-color: rgba(0, 30, 197, 0.582);
+}
+
+.abtUno{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: 100px 100px 0px 100px; 
+    color: white;
+}
+
+.abtUno img{
+    width: 100%;
+    border-radius: 30px;
+    border: 5px solid rgba(255, 255, 255, 0.856);
+}
+
+.abtUno h1{
+    margin-top: 30px;
+    font-size: 54px;
+    text-align: right;
+    padding: 0px 50px 0px 0px;
+}
+
+.abtUno p{
+    padding: 15px 50px 0px 0px;
+    font-size: 1.5rem;
+    font-weight: lighter;
     text-align: right;
 }
 
-.aboutUsPage p{
-    margin-left: 600px;
-    padding-left: 200px ;
-    text-align: left;
-    width: 50%;
-
-    }
-
-.secondAbout h1{
-    padding: 50px 0px 10px 0px;
-    font-size: 45px;
-    text-align: center;
-    margin: auto;
-    padding-left: 5%;
+.abtDos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
     color: white;
-    } 
-
-.secondAbout p{
-    padding: 10px 0px 80px 5px;
-    font-size: 20px;
-    text-align: center;
-    margin: auto;
-    width: 90%;
-    padding-right: 10%;
-    color: white;      
-    }   
-
-    .secondAbout img{
-        width: 60%;
-        height: 500px; 
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 250px;
-        padding: 50px 100px 0px 100px;
-    }
-
-.contactUs{
-    color: white;
-    text-align: center;
-    margin: 20px;
 }
 
-.contactUs h1{
-    font-size: 64px;
-    text-align: left;
-    padding: 15px;
+.abtDos h1{
+    font-size: 54px;
+    text-align: center;
+    padding: 20px 0px;
 }
 
-.contactUs p{
+.abtDos p{
+    text-align: center;
+    padding: 10px 100px 20px 100px;
     font-weight: lighter;
-    text-align: left;
-    width: 40%;
+    font-size: 1.5rem;
 }
 
-.infoContainer{
-    width: 205px;
-    height: 300px;
-    background-color: white;
+
+.abtDos img{
+    display: flex;
+    justify-content: center;
     margin: 20px;
-    border-radius: 10%
+    width: 70%;
+    height: 500px;
+    border-radius: 30px;
+    border: 5px solid rgba(255, 255, 255, 0.856);
+    margin: 10px 15%;
+}
+
+.abtTres{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: 150px 100px 0px 100px; 
+    color: white;
+}
+
+.abtTres img{
+    margin-right: 100px;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: 5px solid rgba(255, 255, 255, 0.856);
+}
+
+.abtTres h1{
+    margin-top: 30px;
+    font-size: 54px;
+    text-align: left;
+    padding: 0px 50px 0px 0px;
+}
+
+.abtTres p{
+    padding-top: 15px;
+    margin-right: 200px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+.contenedorServices{
+    padding: 100px 80px;
+    gap: 30px;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+
+.contenedorServices img{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: 5px solid rgba(255, 255, 255, 0.856);
+}
+
+.contenedorServices h1{
+    font-size: 45px;
+    padding-top: 100px;
+}
+
+.contenedorServices p{
+    padding-top: 20px;
+    font-weight: lighter;
+    font-size: 22px;
+}
+
+.contenedorServices .contenedorTextoServices{
+    grid-row: 1/1;
+    grid-column: 2/3;
+}
+
+/* .seccionServicesDos{
+    display: grid;
+    width: 100%;
+    padding: 100px 80px;
+    gap: 20px;
+    color: white;
+    grid-template-columns: repeat(8, 1fr); 
+    grid-template-rows: auto auto ; 1 fila de 100px, 1 fila de 50px y 6 filas que ocupan el espacio restante 
+    grid-template-areas: 
+    
+    "tituloServ tituloServ tituloServ tituloServ tituloServ tituloServ tituloServ tituloServ"
+    "subtServ subtServ subtServ subtServ subtServ subtServ subtServ"
+    ". generalServices generalServices . . commercialLights comercialLights"
+    ". generalServices generalServices . . commercialLights comercialLights"
+    ". specialLights specialLights . . otherServices otherServices"
+    ". specialLights specialLights . . otherServices otherServices"
     ;
-    
+    justify-content: center;
+    align-content: center;
     }
     
-    .infoContainer div{
-        width: 100%;
-        height: 200px;
-    
-    }
-    
-    .infoContainer img{
-        padding-top: 80px;
-        padding-left: 100px;
-        object-fit: contain;
-        width:60%;
-        height: 60%;
-    }
-
-    .mainInfoContainer{
-        display: flex;
-        width: 70%;
-        flex-direction: row;
-        flex-direction: row-reverse;
-        justify-content: right;
+    .tituloServ {
+        grid-area: tituloServ;
         text-align: center;
-        padding-left:400px;
+    }
+    
+    .subtServ {
+        grid-area: subtServ;
+        text-align: center;
+    }
+    
+    .generalServices {
+        grid-area: generalServices;
+    }
+    
+    .commercialLights {
+        grid-area: commercialLights;
+    }
+    
+    .specialLights {
+        grid-area: specialLights;
+    }
+    
+    .otherServices {
+        grid-area: otherServices;
     }
 
+
+
+
+
+
+
+ */
+
+.seccionServicesDos {
+    display: grid;
+    width: 100%;
+    padding: 10px 80px;
+    gap: 20px;
+    color: white;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto auto; 
+    grid-template-areas: 
+        "tituloServ tituloServ tituloServ tituloServ"
+        "subtServ subtServ subtServ subtServ"
+        "generalServices generalServices commercialLights commercialLights"
+        "specialLights specialLights otherServices otherServices";
+    justify-content: center;
+    align-items: center;
+}
+
+.seccionServicesDos h1{
+    font-size: 4rem;
+}
+
+.seccionServicesDos p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    padding-bottom: 40px;
+}
+
+.tituloServ {
+    grid-area: tituloServ;
+    text-align: center;
+}
+
+.subtServ {
+    grid-area: subtServ;
+    text-align: center;
+}
+
+.generalServices, .commercialLights, .specialLights, .otherServices {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.generalServices h3, .commercialLights h3, .specialLights h3, .otherServices h3{
+    background-color: blue;
+    padding: 0px 100px;
+    border-radius: 10px;
+
+}
+
+.generalServices img, .commercialLights img, .specialLights img, .otherServices img{
+    width: 50%;
+    height: auto;
+
+
+}
+
+.generalServices {
+    grid-area: generalServices;
+}
+
+.commercialLights {
+    grid-area: commercialLights;
+}
+
+.specialLights {
+    grid-area: specialLights;
+}
+
+.otherServices {
+    grid-area: otherServices;
+}
+
+/* Falta organizar tamaño de imagenes
+
+NOTA: Preguntar/Investigar si se puede añadir un grid a una grid, para acomodar cada caja de servicios mucho mejor, de lo contrario, crear rama con flexbox
+
+preguntar sobre como generar efecto de hacer que la información aparezca al dar click o posicionarme sobre la caja
+
+*/
+
+.containerFaqs{
+    color: white;
+    display: grid;
+    width: 100%;
+    padding: 80px 80px;
+    gap: 25px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:
+
+    "tituloFaqs tituloFaqs tituloFaqs tituloFaqs"
+    "faqUno faqDos faqTres faqCuatro"
+    "faqCinco faqSeis faqSiete faqOcho"    
+    "faqNueve faqDiez faqOnce faqDoce"
+    ;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloFaqs{
+    grid-area: tituloFaqs;
+text-align: center;
+}
+
+.faqUno{
+    grid-area: faqUno;
+}
+
+.faqDos{
+    grid-area: faqDos;
+}
+
+.faqTres{
+    grid-area: faqTres;
+}
+
+.faqCuatro{
+    grid-area: faqCuatro;
+}
+
+.faqCinco{
+    grid-area: faqCinco;
+}
+
+.faqSeis{
+    grid-area: faqSeis;
+}
+
+.faqSiete{
+    grid-area: faqSiete;
+}
+
+.faqOcho{
+    grid-area: faqOcho;
+}
+
+.faqNueve{
+    grid-area: faqNueve;
+}
+
+.faqDiez{
+    grid-area: faqDiez;
+}
+
+.faqOnce{
+    grid-area: faqOnce;
+}
+
+.faqDoce{
+    grid-area: faqDoce;   
+    }
+
+.tituloFaqs{
+    font-size: 4rem;
+    text-align: center;
+    }
+
+.faqUno, .faqDos, .faqTres, .faqCuatro, .faqCinco, .faqSeis, .faqSiete, .faqOcho, .faqNueve,
+.faqDiez, .faqOnce, .faqDoce{
+    display: flex;
+    background-color: black;
+    font-size: 1.5rem;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.faqUno img, .faqDos img, .faqTres img, .faqCuatro img, .faqCinco img, .faqSeis img, .faqSiete img, 
+.faqOcho img, .faqNueve img, .faqDiez img, .faqOnce img, .faqDoce img{
+width: 25%;
+height: 100%;
+padding: 0px 20px 0px 0px;
+}
+
+.faqUno:hover, .faqDos:hover, .faqTres:hover, .faqCuatro:hover, .faqCinco:hover, 
+.faqSeis:hover, .faqSiete:hover, .faqOcho:hover, .faqNueve:hover, .faqDiez:hover, 
+.faqOnce:hover, .faqDoce:hover {
+    background-color: #333; 
+    transform: scale(1.05);
+    }
+
+    
