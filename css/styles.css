@@ -410,6 +410,41 @@ nav li a{
     font-weight: lighter;
 }
 
+@media (max-width: 768px) {
+    .abtUno {
+        flex-direction: column; 
+        margin: 20px; 
+    }
+    .abtUno h1, .abtUno p {
+        text-align: center; 
+        padding: 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .abtDos img {
+        width: 90%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    .abtTres {
+        flex-direction: column; 
+        margin: 20px; 
+    }
+    .abtTres h1, .abtTres p {
+        text-align: center;
+        padding: 0;
+        margin-right: 0; 
+    }
+    .abtTres img {
+        margin-right: 0; 
+        width: 90%; 
+        height: auto;
+    }
+}
+
 .contenedorServices{
     padding: 100px 80px;
     gap: 30px;
@@ -681,4 +716,42 @@ padding: 0px 20px 0px 0px;
     transform: scale(1.05);
     }
 
+.getInTouchPage{
+    color: white;
+    margin-bottom: 50px;
+}
     
+.tituloContact{
+    margin-top: 40px;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.parrafoContact{
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: lighter;
+    padding: 15px 80px;
+}
+
+.custom-btn{
+    background-color: blue;
+    color: white;
+    font-size: 1rem;
+    font-family: "Oswald", sans-serif;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.s;
+}
+
+.botonPresentacion:hover {
+    background-color: rgba(0, 30, 197, 0.582);
+    }
+
+    .mt-5{
+        font-size: 1rem;
+    }
+
