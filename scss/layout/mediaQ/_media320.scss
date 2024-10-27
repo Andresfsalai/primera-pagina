@@ -1,0 +1,21 @@
+@media (max-width: 320px) {
+    .abtUno, .abtTres {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px; 
+    }
+
+    .abtUno h1, .abtUno p,
+    .abtTres h1, .abtTres p {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .abtDos img, .abtTres img {
+        width: 100%; 
+        height: auto;
+        margin: 0 auto; 
+    }
+}

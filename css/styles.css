@@ -1,107 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-/*   font-family: "Oswald", sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: black;
+  background-image: url("../../assets/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
-body{
-    font-family: "Oswald", sans-serif;
-    background-color: black;
-    background-image: url("../assets/images/bg.PNG");
-    background-size: cover;
-    background-position:center;
-    background-repeat: no-repeat;
-}
-
-header{
-    background-color: rgb(12, 12, 12);
-    display: flex;
+header {
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+  background-color: black;
+  display: flex;
+  width: 100%;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  padding: 10px 80px;
+  align-items: center;
+  border-bottom: 2px solid #b6b6b641;
+  z-index: 1000; }
+  header img {
     width: 100%;
-    height: 80px; 
-    position: sticky;
-    top: 0;
-    gap: 10%;
-    padding: 10px 80px;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.247);
+    height: 100%;
+    cursor: pointer; }
 
-}
-
-header img{
-    width: 100%;
-    height: 100%x;
-    cursor: pointer;
-}
-
-nav{
-    display: flex;
-    width: 100%;
-    gap: 20%;
-    justify-content: center;
-    align-items: center;
-
-
-}
-
-.navbar{ 
-    display: flex;
-    list-style: none;
-    gap: 25px;
-    margin: 0;
-    
-}
-
-nav li a{
-    display: flex;
-    font-size: 1.5rem;
+.bannerPrincipal {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0px; }
+  .bannerPrincipal .bannerText {
     color: white;
-    text-decoration: none;
-    text-align: center;
-}
-
-.bnav{
-    background-color: blue;
-    font-size: 1.5rem;
-    font-family: "Oswald", sans-serif;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.bnav:hover {
-    background-color: rgba(0, 30, 197, 0.582);
-    }
-
-.bannerPrincipal{
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 0px;
-} 
-
-.bannerPrincipal h1{
-    font-size: 4rem;
-}
-
-.bannerPrincipal p{
+    padding: 25px 15px 0px 90px; }
+  .bannerPrincipal h1 {
+    font-size: 4rem; }
+  .bannerPrincipal p {
     font-size: 1.5rem;
     font-weight: lighter;
-    padding-bottom: 10px;
-}
-
-.bannerText{
-    color: white; 
-    padding: 25px 15px 0px 90px; 
-    
-}
-
-.botonPresentacion{
+    padding-bottom: 10px; }
+  .bannerPrincipal .botonPresentacion {
     background-color: blue;
     color: white;
     font-size: 1.5rem;
@@ -111,150 +57,49 @@ nav li a{
     border-style: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.s;
-}
-
-.botonPresentacion:hover {
-    background-color: rgba(0, 30, 197, 0.582);
-    }
-
-.botonServiciosIndex {
-    background-color: transparent; 
-    color: white; 
+    transition: background-color 0.1s; }
+    .bannerPrincipal .botonPresentacion:hover {
+      background-color: #001ec594; }
+  .bannerPrincipal .botonServiciosIndex {
+    background-color: transparent;
+    color: white;
     font-size: 1.5rem;
     font-family: "Oswald", sans-serif;
     padding: 3px 10px;
     margin-top: 15px;
     margin-left: 10px;
-    border: 2px solid rgb(255, 255, 255); 
-    border-radius: 5px; 
-    cursor: pointer; 
-    transition: background-color 0.2s;
-}
-
-.botonServiciosIndex:hover {
-    background-color: rgba(182, 182, 182, 0.253);
-    }
-
-.tituloBannerSecundario{
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    gap: .3125rem;
-    color: white;
-    justify-content: center;
-    font-size: 28px;
-}
-
-.decoUnoIndex{
-    background-color: blue;
-    padding: 0px 8px;
-    border-radius: 10px;
-}
-
-.decoDosIndex{
-    background-color: blue;
-    padding: 0px 8px;
-    border-radius: 10px;
-}
-
-.cajasBanner {
-    display: flex; 
-    justify-content: center; 
-    padding: 30px; 
-    color: white;
-    gap: 3.125rem;
-    margin-top: 25px;
-    text-align: center;
-}
-
-.cajaUno{
-    width: 20%; 
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-}
-
-.cajaDos{
-    width: 20%;
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    padding: 20px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-.cajaTres{
-    width: 20%;
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    padding: 20px; 
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-}
-
-.cajaUno img{
-    margin: 20px 0px;
-    width: 50px; 
-    height: auto; 
-    margin-bottom: 10px; 
-}
-
-.cajaDos img{
-    margin: 20px 0px;
-    width: 50px; 
-    height: auto; 
-    margin-bottom: 10px; 
-}
-
-.cajaTres img{
-    margin: 20px 0px;
-    width: 50px; 
-    height: auto; 
-    margin-bottom: 10px; 
-}
-
-.cajasBanner button {
-    background-color: blue; 
-    color: white;
-    border: none;
-    padding: 5px 10px;
+    border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 60px;
-    font-family: "Oswald", sans-serif;
-    font-weight: .1875rem;
-    font-size: 16px;
-}
+    transition: background-color 0.2s; }
+    .bannerPrincipal .botonServiciosIndex:hover {
+      background-color: #b6b6b641; }
 
-.cajasBanner button:hover {
-    background-color: rgba(0, 30, 197, 0.582);
-}
-
-.textoPostCajas{
-    margin: 20px 100px;
-    text-align: center;
-    color: white;
-}
+section .tituloBannerSecundario {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: .3125rem;
+  color: white;
+  justify-content: center;
+  font-size: 4rem; }
+  section .tituloBannerSecundario .decoUnoIndex {
+    background-color: blue;
+    padding: 0px 8px;
+    border-radius: 10px; }
+  section .tituloBannerSecundario .decoDosIndex {
+    background-color: blue;
+    padding: 0px 8px;
+    border-radius: 10px; }
 
 .postCaja {
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    text-align: center;     
-    margin: 20px 0;       
-} 
-
-.postCaja button{
-    background-color: blue; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0; }
+  .postCaja button {
+    background-color: blue;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -262,50 +107,36 @@ nav li a{
     cursor: pointer;
     font-family: "Oswald", sans-serif;
     font-weight: .1875rem;
-    font-size: 1.5rem;
-}
-
-.postCaja button:hover{
-    background-color: rgba(0, 30, 197, 0.582);
-}
-
-.postCaja p{
+    font-size: 1.5rem; }
+    .postCaja button:hover {
+      background-color: #001ec594; }
+  .postCaja p {
     color: white;
     padding: 20px 100px;
     font-weight: lighter;
-    font-size: 1.5rem;
+    font-size: 1.5rem; }
 
-}
-
-.landingFinal{
-    display: flex;
-    justify-content: space-between;
-    gap: 5rem;
-    margin: 100px 100px 0px 100px; 
-    color: white;
-}
-
-.landingFinal img{
+.landingFinal {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  margin: 100px 100px 0px 100px;
+  color: white; }
+  .landingFinal img {
     border-radius: 50px;
     width: 100%;
     height: 75%;
     border-radius: 30px;
-    border: 5px solid rgba(255, 255, 255, 0.856);
-}
-
-.landingFinal h1{
-    font-size: 3.375rem;
-    margin-top: 50px;
-}
-
-.landingFinal p{
+    border: #d4d4d4; }
+  .landingFinal h2 {
+    font-size: 4rem;
+    margin-top: 50px; }
+  .landingFinal p {
     padding: 20px 10px 20px 0px;
     font-size: 1.5rem;
-    font-weight: lighter;
-}
-
-.landingFinal button{
-    background-color: blue; 
+    font-weight: lighter; }
+  .landingFinal button {
+    background-color: blue;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -313,445 +144,420 @@ nav li a{
     cursor: pointer;
     font-family: "Oswald", sans-serif;
     font-weight: .1875rem;
+    font-size: 1.5rem; }
+    .landingFinal button:hover {
+      background-color: rgba(0, 30, 197, 0.582); }
+
+.contenedorServices {
+  padding: 100px 80px;
+  gap: 30px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr); }
+  .contenedorServices img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border: 5px solid #d4d4d4; }
+  .contenedorServices h1 {
+    font-size: 4rem;
+    padding-top: 100px; }
+  .contenedorServices p {
+    padding-top: 20px;
+    font-weight: lighter;
+    font-size: 1.5rem; }
+  .contenedorServices .contenedorServices .contenedorTextoServices {
+    grid-row: 1/1;
+    grid-column: 2/3; }
+
+.seccionServicesDos {
+  display: grid;
+  width: 100%;
+  padding: 10px 80px;
+  margin-top: 80px;
+  gap: 20px;
+  color: white;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto 1fr 1fr;
+  grid-template-areas: "tituloServ tituloServ tituloServ tituloServ" "subtServ subtServ subtServ subtServ" "generalServices generalServices commercialLights commercialLights" "specialLights specialLights otherServices otherServices";
+  justify-content: center;
+  align-items: center; }
+  .seccionServicesDos .tituloServ {
+    grid-area: tituloServ;
+    text-align: center;
+    font-size: 4rem; }
+  .seccionServicesDos .subtServ {
+    grid-area: subtServ;
+    text-align: center;
     font-size: 1.5rem;
-}
-
-.landingFinal button:hover{
-    background-color: rgba(0, 30, 197, 0.582);
-}
-
-.abtUno{
+    font-weight: lighter;
+    padding-bottom: 40px; }
+  .seccionServicesDos .generalServices,
+  .seccionServicesDos .commercialLights,
+  .seccionServicesDos .specialLights,
+  .seccionServicesDos .otherServices {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    min-height: 300px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 5rem;
-    margin: 100px 100px 0px 100px; 
-    color: white;
-}
+    align-items: center;
+    gap: 1.875rem;
+    display: flex;
+    overflow: hidden;
+    margin: 0px 50px 0px 50px; }
+    .seccionServicesDos .generalServices h3,
+    .seccionServicesDos .commercialLights h3,
+    .seccionServicesDos .specialLights h3,
+    .seccionServicesDos .otherServices h3 {
+      background-color: blue;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 1.5rem;
+      margin: 0; }
+  .seccionServicesDos .generalServices img {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 40%;
+    height: auto;
+    margin: 0;
+    padding: 0; }
+  .seccionServicesDos .commercialLights img {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 40%;
+    height: auto;
+    margin: 0;
+    padding: 0; }
+  .seccionServicesDos .specialLights img {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 35%;
+    height: auto;
+    margin: 0;
+    padding: 0; }
+  .seccionServicesDos .otherServices img {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 50%;
+    height: auto;
+    margin: 0;
+    padding: 0; }
+  .seccionServicesDos .generalServices {
+    grid-area: generalServices; }
+  .seccionServicesDos .commercialLights {
+    grid-area: commercialLights; }
+  .seccionServicesDos .specialLights {
+    grid-area: specialLights; }
+  .seccionServicesDos .otherServices {
+    grid-area: otherServices; }
 
-.abtUno img{
+.abtUno {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  margin: 100px 100px 0px 100px;
+  color: white; }
+  .abtUno img {
     width: 100%;
     border-radius: 30px;
-    border: 5px solid rgba(255, 255, 255, 0.856);
-}
-
-.abtUno h1{
+    border: 5px solid #d4d4d4; }
+  .abtUno h1 {
     margin-top: 30px;
-    font-size: 54px;
+    font-size: 4rem;
     text-align: right;
-    padding: 0px 50px 0px 0px;
-}
-
-.abtUno p{
+    padding: 0px 50px 0px 0px; }
+  .abtUno p {
     padding: 15px 50px 0px 0px;
     font-size: 1.5rem;
     font-weight: lighter;
-    text-align: right;
-}
+    text-align: right; }
 
-.abtDos{
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-    color: white;
-}
-
-.abtDos h1{
-    font-size: 54px;
-    text-align: center;
-    padding: 20px 0px;
-}
-
-.abtDos p{
-    text-align: center;
-    padding: 10px 100px 20px 100px;
-    font-weight: lighter;
-    font-size: 1.5rem;
-}
-
-
-.abtDos img{
+.abtDos {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  color: white; }
+  .abtDos img {
     display: flex;
     justify-content: center;
     margin: 20px;
     width: 70%;
     height: 500px;
     border-radius: 30px;
-    border: 5px solid rgba(255, 255, 255, 0.856);
-    margin: 10px 15%;
-}
+    border: 5px solid #d4d4d4;
+    margin: 10px 15%; }
+  .abtDos h1 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 20px 0px; }
+  .abtDos p {
+    text-align: center;
+    padding: 10px 100px 20px 100px;
+    font-weight: lighter;
+    font-size: 1.5rem; }
 
-.abtTres{
-    display: flex;
-    justify-content: space-between;
-    gap: 5rem;
-    margin: 150px 100px 0px 100px; 
-    color: white;
-}
-
-.abtTres img{
+.abtTres {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  margin: 150px 100px 0px 100px;
+  color: white; }
+  .abtTres img {
     margin-right: 100px;
     width: 100%;
     height: auto;
     border-radius: 30px;
-    border: 5px solid rgba(255, 255, 255, 0.856);
-}
-
-.abtTres h1{
+    border: 5px solid #d4d4d4; }
+  .abtTres h1 {
     margin-top: 30px;
-    font-size: 54px;
+    font-size: 4rem;
     text-align: left;
-    padding: 0px 50px 0px 0px;
-}
-
-.abtTres p{
+    padding: 0px 50px 0px 0px; }
+  .abtTres p {
     padding-top: 15px;
     margin-right: 200px;
     font-size: 1.5rem;
-    font-weight: lighter;
-}
+    font-weight: lighter; }
 
-@media (max-width: 768px) {
-    .abtUno {
-        flex-direction: column; 
-        margin: 20px; 
-    }
-    .abtUno h1, .abtUno p {
-        text-align: center; 
-        padding: 0; 
-    }
-}
-
-@media (max-width: 768px) {
-    .abtDos img {
-        width: 90%; 
-        height: auto; 
-    }
-}
-
-@media (max-width: 768px) {
-    .abtTres {
-        flex-direction: column; 
-        margin: 20px; 
-    }
-    .abtTres h1, .abtTres p {
-        text-align: center;
-        padding: 0;
-        margin-right: 0; 
-    }
-    .abtTres img {
-        margin-right: 0; 
-        width: 90%; 
-        height: auto;
-    }
-}
-
-.contenedorServices{
-    padding: 100px 80px;
-    gap: 30px;
-    color: white;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(1,1fr);
-}
-
-.contenedorServices img{
-    width: 100%;
-    height: auto;
-    border-radius: 30px;
-    border: 5px solid rgba(255, 255, 255, 0.856);
-}
-
-.contenedorServices h1{
-    font-size: 45px;
-    padding-top: 100px;
-}
-
-.contenedorServices p{
-    padding-top: 20px;
-    font-weight: lighter;
-    font-size: 22px;
-}
-
-.contenedorServices .contenedorTextoServices{
-    grid-row: 1/1;
-    grid-column: 2/3;
-}
-
-/* .seccionServicesDos{
-    display: grid;
-    width: 100%;
-    padding: 100px 80px;
-    gap: 20px;
-    color: white;
-    grid-template-columns: repeat(8, 1fr); 
-    grid-template-rows: auto auto ; 1 fila de 100px, 1 fila de 50px y 6 filas que ocupan el espacio restante 
-    grid-template-areas: 
-    
-    "tituloServ tituloServ tituloServ tituloServ tituloServ tituloServ tituloServ tituloServ"
-    "subtServ subtServ subtServ subtServ subtServ subtServ subtServ"
-    ". generalServices generalServices . . commercialLights comercialLights"
-    ". generalServices generalServices . . commercialLights comercialLights"
-    ". specialLights specialLights . . otherServices otherServices"
-    ". specialLights specialLights . . otherServices otherServices"
-    ;
-    justify-content: center;
-    align-content: center;
-    }
-    
-    .tituloServ {
-        grid-area: tituloServ;
-        text-align: center;
-    }
-    
-    .subtServ {
-        grid-area: subtServ;
-        text-align: center;
-    }
-    
-    .generalServices {
-        grid-area: generalServices;
-    }
-    
-    .commercialLights {
-        grid-area: commercialLights;
-    }
-    
-    .specialLights {
-        grid-area: specialLights;
-    }
-    
-    .otherServices {
-        grid-area: otherServices;
-    }
-
-
-
-
-
-
-
- */
-
-.seccionServicesDos {
-    display: grid;
-    width: 100%;
-    padding: 10px 80px;
-    gap: 20px;
-    color: white;
-    grid-template-columns: repeat(4, 1fr); 
-    grid-template-rows: auto auto; 
-    grid-template-areas: 
-        "tituloServ tituloServ tituloServ tituloServ"
-        "subtServ subtServ subtServ subtServ"
-        "generalServices generalServices commercialLights commercialLights"
-        "specialLights specialLights otherServices otherServices";
-    justify-content: center;
-    align-items: center;
-}
-
-.seccionServicesDos h1{
-    font-size: 4rem;
-}
-
-.seccionServicesDos p{
-    font-size: 1.5rem;
-    font-weight: lighter;
-    padding-bottom: 40px;
-}
-
-.tituloServ {
-    grid-area: tituloServ;
-    text-align: center;
-}
-
-.subtServ {
-    grid-area: subtServ;
-    text-align: center;
-}
-
-.generalServices, .commercialLights, .specialLights, .otherServices {
-    background-color: white;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-}
-
-.generalServices h3, .commercialLights h3, .specialLights h3, .otherServices h3{
-    background-color: blue;
-    padding: 0px 100px;
-    border-radius: 10px;
-
-}
-
-.generalServices img, .commercialLights img, .specialLights img, .otherServices img{
-    width: 50%;
-    height: auto;
-
-
-}
-
-.generalServices {
-    grid-area: generalServices;
-}
-
-.commercialLights {
-    grid-area: commercialLights;
-}
-
-.specialLights {
-    grid-area: specialLights;
-}
-
-.otherServices {
-    grid-area: otherServices;
-}
-
-/* Falta organizar tamaño de imagenes
-
-NOTA: Preguntar/Investigar si se puede añadir un grid a una grid, para acomodar cada caja de servicios mucho mejor, de lo contrario, crear rama con flexbox
-
-preguntar sobre como generar efecto de hacer que la información aparezca al dar click o posicionarme sobre la caja
-
-*/
-
-.containerFaqs{
-    color: white;
-    display: grid;
-    width: 100%;
-    padding: 80px 80px;
-    gap: 25px;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
-    grid-template-areas:
-
-    "tituloFaqs tituloFaqs tituloFaqs tituloFaqs"
-    "faqUno faqDos faqTres faqCuatro"
-    "faqCinco faqSeis faqSiete faqOcho"    
-    "faqNueve faqDiez faqOnce faqDoce"
-    ;
-    justify-content: center;
-    align-items: center;
-}
-
-.tituloFaqs{
+.containerFaqs {
+  color: white;
+  display: grid;
+  width: 100%;
+  padding: 80px 80px;
+  gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "tituloFaqs tituloFaqs tituloFaqs tituloFaqs" "faqUno faqDos faqTres faqCuatro" "faqCinco faqSeis faqSiete faqOcho"     "faqNueve faqDiez faqOnce faqDoce";
+  justify-content: center;
+  align-items: center; }
+  .containerFaqs .tituloFaqs {
     grid-area: tituloFaqs;
-text-align: center;
-}
-
-.faqUno{
-    grid-area: faqUno;
-}
-
-.faqDos{
-    grid-area: faqDos;
-}
-
-.faqTres{
-    grid-area: faqTres;
-}
-
-.faqCuatro{
-    grid-area: faqCuatro;
-}
-
-.faqCinco{
-    grid-area: faqCinco;
-}
-
-.faqSeis{
-    grid-area: faqSeis;
-}
-
-.faqSiete{
-    grid-area: faqSiete;
-}
-
-.faqOcho{
-    grid-area: faqOcho;
-}
-
-.faqNueve{
-    grid-area: faqNueve;
-}
-
-.faqDiez{
-    grid-area: faqDiez;
-}
-
-.faqOnce{
-    grid-area: faqOnce;
-}
-
-.faqDoce{
-    grid-area: faqDoce;   
-    }
-
-.tituloFaqs{
-    font-size: 4rem;
-    text-align: center;
-    }
-
-.faqUno, .faqDos, .faqTres, .faqCuatro, .faqCinco, .faqSeis, .faqSiete, .faqOcho, .faqNueve,
-.faqDiez, .faqOnce, .faqDoce{
+    text-align: center; }
+  .containerFaqs .faqUno {
+    grid-area: faqUno; }
+  .containerFaqs .faqDos {
+    grid-area: faqDos; }
+  .containerFaqs .faqTres {
+    grid-area: faqTres; }
+  .containerFaqs .faqCuatro {
+    grid-area: faqCuatro; }
+  .containerFaqs .faqCinco {
+    grid-area: faqCinco; }
+  .containerFaqs .faqSeis {
+    grid-area: faqSeis; }
+  .containerFaqs .faqSiete {
+    grid-area: faqSiete; }
+  .containerFaqs .faqOcho {
+    grid-area: faqOcho; }
+  .containerFaqs .faqNueve {
+    grid-area: faqNueve; }
+  .containerFaqs .faqDiez {
+    grid-area: faqDiez; }
+  .containerFaqs .faqOnce {
+    grid-area: faqOnce; }
+  .containerFaqs .faqDoce {
+    grid-area: faqDoce; }
+  .containerFaqs .faqUno, .containerFaqs .faqDos, .containerFaqs .faqTres, .containerFaqs .faqCuatro, .containerFaqs .faqCinco, .containerFaqs .faqSeis, .containerFaqs .faqSiete, .containerFaqs .faqOcho, .containerFaqs .faqNueve,
+  .containerFaqs .faqDiez, .containerFaqs .faqOnce, .containerFaqs .faqDoce {
     display: flex;
     background-color: black;
     font-size: 1.5rem;
     align-content: center;
     justify-content: center;
     padding: 20px;
-    border-radius: 10px;
-}
+    border-radius: 10px; }
+    .containerFaqs .faqUno img, .containerFaqs .faqDos img, .containerFaqs .faqTres img, .containerFaqs .faqCuatro img, .containerFaqs .faqCinco img, .containerFaqs .faqSeis img, .containerFaqs .faqSiete img, .containerFaqs .faqOcho img, .containerFaqs .faqNueve img,
+    .containerFaqs .faqDiez img, .containerFaqs .faqOnce img, .containerFaqs .faqDoce img {
+      width: 25%;
+      height: 100%;
+      padding: 0px 20px 0px 0px; }
+    .containerFaqs .faqUno:hover, .containerFaqs .faqDos:hover, .containerFaqs .faqTres:hover, .containerFaqs .faqCuatro:hover, .containerFaqs .faqCinco:hover, .containerFaqs .faqSeis:hover, .containerFaqs .faqSiete:hover, .containerFaqs .faqOcho:hover, .containerFaqs .faqNueve:hover,
+    .containerFaqs .faqDiez:hover, .containerFaqs .faqOnce:hover, .containerFaqs .faqDoce:hover {
+      background-color: #333;
+      transform: scale(1.05); }
 
-.faqUno img, .faqDos img, .faqTres img, .faqCuatro img, .faqCinco img, .faqSeis img, .faqSiete img, 
-.faqOcho img, .faqNueve img, .faqDiez img, .faqOnce img, .faqDoce img{
-width: 25%;
-height: 100%;
-padding: 0px 20px 0px 0px;
-}
+.tituloFaqs {
+  font-size: 4rem;
+  text-align: center; }
 
-.faqUno:hover, .faqDos:hover, .faqTres:hover, .faqCuatro:hover, .faqCinco:hover, 
-.faqSeis:hover, .faqSiete:hover, .faqOcho:hover, .faqNueve:hover, .faqDiez:hover, 
-.faqOnce:hover, .faqDoce:hover {
-    background-color: #333; 
-    transform: scale(1.05);
-    }
-
-.getInTouchPage{
-    color: white;
-    margin-bottom: 50px;
-}
-    
-.tituloContact{
+.getInTouchPage {
+  color: white;
+  margin-bottom: 50px; }
+  .getInTouchPage .preContainer h1 {
     margin-top: 40px;
     font-size: 4rem;
-    text-align: center;
-}
-
-.parrafoContact{
+    text-align: center; }
+  .getInTouchPage .preContainer p {
     font-size: 1.5rem;
     text-align: center;
     font-weight: lighter;
-    padding: 15px 80px;
-}
+    padding: 15px 80px; }
 
-.custom-btn{
+.custom-btn {
+  background-color: blue;
+  color: white;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.1s; }
+  .custom-btn:hover {
+    background-color: rgba(0, 30, 197, 0.582); }
+
+.mt-5 {
+  font-size: 16px; }
+
+.cajasBanner {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  color: white;
+  gap: 3.125rem;
+  margin-top: 25px;
+  text-align: center; }
+  .cajasBanner .cajaUno {
+    width: 20%;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .cajasBanner .cajaUno img {
+      margin: 20px 0px;
+      width: 50px;
+      height: auto;
+      margin-bottom: 10px; }
+  .cajasBanner .cajaDos {
+    width: 20%;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .cajasBanner .cajaDos img {
+      margin: 20px 0px;
+      width: 50px;
+      height: auto;
+      margin-bottom: 10px; }
+  .cajasBanner .cajaTres {
+    width: 20%;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .cajasBanner .cajaTres img {
+      margin: 20px 0px;
+      width: 50px;
+      height: auto;
+      margin-bottom: 10px; }
+  .cajasBanner button {
     background-color: blue;
     color: white;
-    font-size: 1rem;
-    font-family: "Oswald", sans-serif;
+    border: none;
     padding: 5px 10px;
-    margin-top: 10px;
-    border-style: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.s;
-}
+    margin-top: 60px;
+    font-family: "Oswald", sans-serif;
+    font-weight: .1875rem;
+    font-size: 16px; }
+    .cajasBanner button:hover {
+      background-color: #001ec594; }
 
-.botonPresentacion:hover {
-    background-color: rgba(0, 30, 197, 0.582);
-    }
+nav {
+  display: flex;
+  width: 100%;
+  gap: 20%;
+  justify-content: center;
+  align-items: center; }
+  nav .navbar {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0; }
+  nav li a {
+    display: flex;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    text-align: center; }
+    nav li a:hover {
+      color: #d4d4d4; }
+  nav .bnav {
+    background-color: blue;
+    font-size: 1.5rem;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s; }
+    nav .bnav:hover {
+      background-color: #001ec594; }
 
-    .mt-5{
-        font-size: 1rem;
-    }
+@media (max-width: 320px) {
+  .abtUno, .abtTres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; }
+  .abtUno h1, .abtUno p,
+  .abtTres h1, .abtTres p {
+    text-align: center;
+    padding: 0;
+    margin: 0; }
+  .abtDos img, .abtTres img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto; } }
 
+@media (max-width: 750px) {
+  .abtUno {
+    flex-direction: column;
+    margin: 20px; }
+  .abtUno h1, .abtUno p {
+    text-align: center;
+    padding: 0; } }
+
+@media (max-width: 750px) {
+  .abtDos img {
+    width: 90%;
+    height: auto; } }
+
+@media (max-width: 7580px) {
+  .abtTres {
+    flex-direction: column;
+    margin: 20px; }
+  .abtTres h1, .abtTres p {
+    text-align: center;
+    padding: 0;
+    margin-right: 0; }
+  .abtTres img {
+    margin-right: 0;
+    width: 90%;
+    height: auto; } }

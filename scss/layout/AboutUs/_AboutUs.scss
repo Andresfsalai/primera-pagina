@@ -1,0 +1,89 @@
+.abtUno{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: 100px 100px 0px 100px; 
+    color:map-get($colores-sitio, color2 );
+
+    img{
+        width: 100%;
+        border-radius: 30px;
+        border: 5px solid map-get($colores-interactivos, color3 );
+    }
+
+    h1{
+        margin-top: 30px;
+        font-size: map-get($fuentes-size , lg );
+        text-align: right;
+        padding: 0px 50px 0px 0px;
+    }
+    
+    p{
+        padding: 15px 50px 0px 0px;
+        font-size: map-get($fuentes-size , sm );
+        font-weight: lighter;
+        text-align: right;
+    }
+}
+
+.abtDos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    color:map-get($colores-sitio, color2 );
+
+    img{
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        width: 70%;
+        height: 500px;
+        border-radius: 30px;
+        border: 5px solid map-get($colores-interactivos, color3 );
+        margin: 10px 15%;
+    }
+
+    h1{
+        font-size: map-get($fuentes-size , lg );
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    p{
+        text-align: center;
+        padding: 10px 100px 20px 100px;
+        font-weight: lighter;
+        font-size: map-get($fuentes-size , sm );
+    }
+}
+
+.abtTres{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: 150px 100px 0px 100px; 
+    color:map-get($colores-sitio, color2 );
+
+    img{
+        margin-right: 100px;
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        border: 5px solid map-get($colores-interactivos, color3 );
+    }
+
+    h1{
+        margin-top: 30px;
+        font-size: map-get($fuentes-size , lg );
+        text-align: left;
+        padding: 0px 50px 0px 0px;
+    }
+
+    p{
+        padding-top: 15px;
+        margin-right: 200px;
+        font-size: map-get($fuentes-size , sm );
+        font-weight: lighter;
+    }
+
+}

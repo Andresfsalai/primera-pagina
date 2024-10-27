@@ -1,0 +1,33 @@
+.contenedorServices{
+    padding: 100px 80px;
+    gap: 30px;
+    color: map-get($colores-sitio , color2 );
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: 30px;
+        border: 5px solid map-get($colores-interactivos , color3 );
+    }
+
+    h1{
+        font-size: map-get($fuentes-size , lg );
+        padding-top: 100px;
+    }
+
+    p{
+        padding-top: 20px;
+        font-weight: lighter;
+        font-size: map-get($fuentes-size, sm );
+    }
+
+    .contenedorServices .contenedorTextoServices{
+        grid-row: 1/1;
+        grid-column: 2/3;
+    }
+
+}
+

@@ -1,0 +1,55 @@
+section{
+    .tituloBannerSecundario{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: .3125rem;
+        color: map-get($colores-sitio , color2 );
+        justify-content: center;
+        font-size: map-get($fuentes-size , lg );
+
+        .decoUnoIndex{
+            background-color: map-get($colores-sitio , color1 );
+            padding: 0px 8px;
+            border-radius: 10px;
+        }
+        
+        .decoDosIndex{
+            background-color: map-get($colores-sitio , color1 );
+            padding: 0px 8px;
+            border-radius: 10px;
+        }
+    }
+}
+
+.postCaja{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;     
+    margin: 20px 0;   
+
+        button{
+            background-color: map-get($colores-sitio , color1 ); 
+            color: map-get($colores-sitio , color2 );
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: "Oswald", sans-serif;
+            font-weight: .1875rem;
+            font-size: 1.5rem;
+
+            &:hover{
+                background-color: map-get($colores-interactivos , color1 );
+            }
+        }
+
+        p{
+            color:map-get($colores-sitio , color2 );
+            padding: 20px 100px;
+            font-weight: lighter;
+            font-size: 1.5rem;
+        }
+}

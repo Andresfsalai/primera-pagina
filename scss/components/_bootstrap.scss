@@ -1,0 +1,20 @@
+.custom-btn{
+    background-color: map-get($colores-sitio , color1 );
+    color: map-get($colores-sitio , color2 );
+    font-size: map-get($fuentes-size ,xs );
+    font-family: "Oswald", sans-serif;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+
+    &:hover {
+        background-color: rgba(0, 30, 197, 0.582);
+        }
+}
+.mt-5{
+    font-size: map-get($fuentes-size ,xs );
+}
+
