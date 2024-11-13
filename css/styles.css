@@ -12,35 +12,78 @@ body {
   background-position: center;
   background-repeat: no-repeat; }
 
+footer {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ddd;
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  border-top: 2px solid #b6b6b641; }
+  footer::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    filter: blur(4px);
+    z-index: 1; }
+  footer a {
+    color: #ddd;
+    text-decoration: none; }
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline; }
+
 header {
   z-index: 1000;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10%;
   background-color: black;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   height: 80px;
   position: sticky;
   top: 0;
-  padding: 10px 80px;
-  align-items: center;
-  border-bottom: 2px solid #b6b6b641;
-  z-index: 1000; }
+  padding: 10px 40px;
+  border-bottom: 2px solid #b6b6b641; }
   header img {
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: auto;
     cursor: pointer; }
+  header .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto; }
+    header .navbar-toggle span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0; }
+  @media (max-width: 900px) {
+    header {
+      padding: 10px 20px; }
+      header .navbar-toggle {
+        display: flex;
+        align-items: center; } }
 
 .bannerPrincipal {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0px; }
+  padding: 5vh;
+  height: auto;
+  width: 100%; }
   .bannerPrincipal .bannerText {
+    width: 50%;
+    height: 100%;
     color: white;
-    padding: 25px 15px 0px 90px; }
+    padding: 5vh 3vw 0 3vw;
+    flex: 1; }
   .bannerPrincipal h1 {
     font-size: 4rem; }
   .bannerPrincipal p {
@@ -54,7 +97,7 @@ header {
     font-family: "Oswald", sans-serif;
     padding: 5px 10px;
     margin-top: 10px;
-    border-style: none;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.1s; }
@@ -74,12 +117,21 @@ header {
     transition: background-color 0.2s; }
     .bannerPrincipal .botonServiciosIndex:hover {
       background-color: #b6b6b641; }
+  .bannerPrincipal .imagenPrincipal {
+    justify-content: center;
+    align-items: center;
+    padding-right: 150px;
+    height: 100%; }
+    .bannerPrincipal .imagenPrincipal img {
+      max-width: 600px;
+      min-width: 400px;
+      height: auto; }
 
 section .tituloBannerSecundario {
-  margin-top: 40px;
+  margin-top: 4vh;
   display: flex;
   flex-direction: row;
-  gap: .3125rem;
+  gap: 5px;
   color: white;
   justify-content: center;
   font-size: 4rem; }
@@ -120,14 +172,14 @@ section .tituloBannerSecundario {
   display: flex;
   justify-content: space-between;
   gap: 5rem;
-  margin: 100px 100px 0px 100px;
+  margin: 11vh 11vh 11vh 11vh;
   color: white; }
   .landingFinal img {
-    border-radius: 50px;
-    width: 100%;
-    height: 75%;
+    max-width: 350px;
+    min-width: 250px;
+    height: auto;
     border-radius: 30px;
-    border: #d4d4d4; }
+    border: 2px solid #d4d4d4; }
   .landingFinal h2 {
     font-size: 4rem;
     margin-top: 50px; }
@@ -149,20 +201,23 @@ section .tituloBannerSecundario {
       background-color: rgba(0, 30, 197, 0.582); }
 
 .contenedorServices {
-  padding: 100px 80px;
-  gap: 30px;
+  padding: 12vh 8vh;
+  gap: 50px;
   color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr); }
   .contenedorServices img {
-    width: 100%;
+    justify-self: center;
+    align-self: center;
+    min-width: 250px;
+    max-width: 350px;
     height: auto;
     border-radius: 30px;
     border: 5px solid #d4d4d4; }
   .contenedorServices h1 {
     font-size: 4rem;
-    padding-top: 100px; }
+    padding-top: 1vh; }
   .contenedorServices p {
     padding-top: 20px;
     font-weight: lighter;
@@ -175,28 +230,23 @@ section .tituloBannerSecundario {
   display: grid;
   width: 100%;
   padding: 10px 80px;
-  margin-top: 80px;
+  margin-top: 20px;
   gap: 20px;
   color: white;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto 1fr 1fr;
-  grid-template-areas: "tituloServ tituloServ tituloServ tituloServ" "subtServ subtServ subtServ subtServ" "generalServices generalServices commercialLights commercialLights" "specialLights specialLights otherServices otherServices";
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  align-items: center; }
+  align-items: start; }
   .seccionServicesDos .tituloServ {
-    grid-area: tituloServ;
+    grid-column: 1 / -1;
     text-align: center;
     font-size: 4rem; }
   .seccionServicesDos .subtServ {
-    grid-area: subtServ;
+    grid-column: 1 / -1;
     text-align: center;
     font-size: 1.5rem;
     font-weight: lighter;
-    padding-bottom: 40px; }
-  .seccionServicesDos .generalServices,
-  .seccionServicesDos .commercialLights,
-  .seccionServicesDos .specialLights,
-  .seccionServicesDos .otherServices {
+    padding-bottom: 15px; }
+  .seccionServicesDos .card {
     background-color: white;
     border-radius: 15px;
     padding: 20px;
@@ -205,65 +255,40 @@ section .tituloBannerSecundario {
     min-height: 300px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
-    gap: 1.875rem;
-    display: flex;
-    overflow: hidden;
-    margin: 0px 50px 0px 50px; }
-    .seccionServicesDos .generalServices h3,
-    .seccionServicesDos .commercialLights h3,
-    .seccionServicesDos .specialLights h3,
-    .seccionServicesDos .otherServices h3 {
+    cursor: pointer;
+    overflow: hidden; }
+    .seccionServicesDos .card h3 {
       background-color: blue;
       color: white;
       padding: 5px 10px;
       border-radius: 5px;
+      font-size: 2.5rem;
+      margin: 0;
+      text-align: center;
+      z-index: 1; }
+    .seccionServicesDos .card .services-list {
+      display: none;
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      width: 100%; }
+      .seccionServicesDos .card .services-list li {
+        background-color: rgba(0, 0, 0, 0.05);
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 5px; }
+    .seccionServicesDos .card img {
       position: absolute;
-      top: 10px;
-      left: 10px;
-      font-size: 1.5rem;
-      margin: 0; }
-  .seccionServicesDos .generalServices img {
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    width: 40%;
-    height: auto;
-    margin: 0;
-    padding: 0; }
-  .seccionServicesDos .commercialLights img {
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    width: 40%;
-    height: auto;
-    margin: 0;
-    padding: 0; }
-  .seccionServicesDos .specialLights img {
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    width: 35%;
-    height: auto;
-    margin: 0;
-    padding: 0; }
-  .seccionServicesDos .otherServices img {
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    width: 50%;
-    height: auto;
-    margin: 0;
-    padding: 0; }
-  .seccionServicesDos .generalServices {
-    grid-area: generalServices; }
-  .seccionServicesDos .commercialLights {
-    grid-area: commercialLights; }
-  .seccionServicesDos .specialLights {
-    grid-area: specialLights; }
-  .seccionServicesDos .otherServices {
-    grid-area: otherServices; }
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      max-width: 185px;
+      height: auto;
+      object-fit: cover;
+      margin: 0;
+      padding: 0; }
 
 .abtUno {
   display: flex;
@@ -272,11 +297,12 @@ section .tituloBannerSecundario {
   margin: 100px 100px 0px 100px;
   color: white; }
   .abtUno img {
-    width: 100%;
+    max-width: 350px;
+    min-width: 250px;
+    height: auto;
     border-radius: 30px;
     border: 5px solid #d4d4d4; }
-  .abtUno h1 {
-    margin-top: 30px;
+  .abtUno h3 {
     font-size: 4rem;
     text-align: right;
     padding: 0px 50px 0px 0px; }
@@ -290,17 +316,19 @@ section .tituloBannerSecundario {
   display: flex;
   flex-direction: column;
   margin-top: 60px;
-  color: white; }
+  color: white;
+  align-items: center; }
   .abtDos img {
     display: flex;
     justify-content: center;
+    align-self: ce;
     margin: 20px;
-    width: 70%;
-    height: 500px;
+    max-width: 700px;
+    min-width: 500px;
+    height: auto;
     border-radius: 30px;
-    border: 5px solid #d4d4d4;
-    margin: 10px 15%; }
-  .abtDos h1 {
+    border: 5px solid #d4d4d4; }
+  .abtDos h3 {
     font-size: 4rem;
     text-align: center;
     padding: 20px 0px; }
@@ -314,7 +342,7 @@ section .tituloBannerSecundario {
   display: flex;
   justify-content: space-between;
   gap: 5rem;
-  margin: 150px 100px 0px 100px;
+  margin: 100px;
   color: white; }
   .abtTres img {
     margin-right: 100px;
@@ -322,7 +350,7 @@ section .tituloBannerSecundario {
     height: auto;
     border-radius: 30px;
     border: 5px solid #d4d4d4; }
-  .abtTres h1 {
+  .abtTres h3 {
     margin-top: 30px;
     font-size: 4rem;
     text-align: left;
@@ -340,59 +368,41 @@ section .tituloBannerSecundario {
   padding: 80px 80px;
   gap: 25px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "tituloFaqs tituloFaqs tituloFaqs tituloFaqs" "faqUno faqDos faqTres faqCuatro" "faqCinco faqSeis faqSiete faqOcho"     "faqNueve faqDiez faqOnce faqDoce";
-  justify-content: center;
-  align-items: center; }
+  grid-template-areas: "tituloFaqs tituloFaqs tituloFaqs tituloFaqs" "faqUno faqDos faqTres faqCuatro" "faqCinco faqSeis faqSiete faqOcho" "faqNueve faqDiez faqOnce faqDoce"; }
   .containerFaqs .tituloFaqs {
     grid-area: tituloFaqs;
-    text-align: center; }
-  .containerFaqs .faqUno {
-    grid-area: faqUno; }
-  .containerFaqs .faqDos {
-    grid-area: faqDos; }
-  .containerFaqs .faqTres {
-    grid-area: faqTres; }
-  .containerFaqs .faqCuatro {
-    grid-area: faqCuatro; }
-  .containerFaqs .faqCinco {
-    grid-area: faqCinco; }
-  .containerFaqs .faqSeis {
-    grid-area: faqSeis; }
-  .containerFaqs .faqSiete {
-    grid-area: faqSiete; }
-  .containerFaqs .faqOcho {
-    grid-area: faqOcho; }
-  .containerFaqs .faqNueve {
-    grid-area: faqNueve; }
-  .containerFaqs .faqDiez {
-    grid-area: faqDiez; }
-  .containerFaqs .faqOnce {
-    grid-area: faqOnce; }
-  .containerFaqs .faqDoce {
-    grid-area: faqDoce; }
-  .containerFaqs .faqUno, .containerFaqs .faqDos, .containerFaqs .faqTres, .containerFaqs .faqCuatro, .containerFaqs .faqCinco, .containerFaqs .faqSeis, .containerFaqs .faqSiete, .containerFaqs .faqOcho, .containerFaqs .faqNueve,
-  .containerFaqs .faqDiez, .containerFaqs .faqOnce, .containerFaqs .faqDoce {
+    text-align: center;
+    font-size: 4rem; }
+  .containerFaqs .faq {
     display: flex;
-    background-color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(19, 19, 19, 0.856);
     font-size: 1.5rem;
-    align-content: center;
-    justify-content: center;
     padding: 20px;
-    border-radius: 10px; }
-    .containerFaqs .faqUno img, .containerFaqs .faqDos img, .containerFaqs .faqTres img, .containerFaqs .faqCuatro img, .containerFaqs .faqCinco img, .containerFaqs .faqSeis img, .containerFaqs .faqSiete img, .containerFaqs .faqOcho img, .containerFaqs .faqNueve img,
-    .containerFaqs .faqDiez img, .containerFaqs .faqOnce img, .containerFaqs .faqDoce img {
+    border-radius: 10px;
+    color: white;
+    min-height: 250px;
+    height: 100%;
+    cursor: pointer; }
+    .containerFaqs .faq img {
       width: 25%;
-      height: 100%;
-      padding: 0px 20px 0px 0px; }
-    .containerFaqs .faqUno:hover, .containerFaqs .faqDos:hover, .containerFaqs .faqTres:hover, .containerFaqs .faqCuatro:hover, .containerFaqs .faqCinco:hover, .containerFaqs .faqSeis:hover, .containerFaqs .faqSiete:hover, .containerFaqs .faqOcho:hover, .containerFaqs .faqNueve:hover,
-    .containerFaqs .faqDiez:hover, .containerFaqs .faqOnce:hover, .containerFaqs .faqDoce:hover {
+      padding-right: 20px; }
+    .containerFaqs .faq h3 {
+      margin-top: 10px;
+      text-align: center; }
+    .containerFaqs .faq .respuesta {
+      display: none;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: lighter; }
+    .containerFaqs .faq.active .respuesta {
+      display: block; }
+    .containerFaqs .faq:hover {
       background-color: #333;
       transform: scale(1.05); }
-
-.tituloFaqs {
-  font-size: 4rem;
-  text-align: center; }
 
 .getInTouchPage {
   color: white;
@@ -429,11 +439,12 @@ section .tituloBannerSecundario {
   justify-content: center;
   padding: 30px;
   color: white;
-  gap: 3.125rem;
+  gap: 70px;
   margin-top: 25px;
   text-align: center; }
   .cajasBanner .cajaUno {
-    width: 20%;
+    width: 35vh;
+    max-height: fit-content;
     background-color: white;
     color: black;
     border-radius: 10px;
@@ -447,8 +458,9 @@ section .tituloBannerSecundario {
       height: auto;
       margin-bottom: 10px; }
   .cajasBanner .cajaDos {
-    width: 20%;
+    width: 35vh;
     background-color: white;
+    height: auto;
     color: black;
     border-radius: 10px;
     padding: 20px;
@@ -457,21 +469,7 @@ section .tituloBannerSecundario {
     align-items: center; }
     .cajasBanner .cajaDos img {
       margin: 20px 0px;
-      width: 50px;
-      height: auto;
-      margin-bottom: 10px; }
-  .cajasBanner .cajaTres {
-    width: 20%;
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .cajasBanner .cajaTres img {
-      margin: 20px 0px;
-      width: 50px;
+      width: auto;
       height: auto;
       margin-bottom: 10px; }
   .cajasBanner button {
@@ -481,7 +479,7 @@ section .tituloBannerSecundario {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 60px;
+    margin-top: auto;
     font-family: "Oswald", sans-serif;
     font-weight: .1875rem;
     font-size: 16px; }
@@ -490,17 +488,28 @@ section .tituloBannerSecundario {
 
 nav {
   display: flex;
-  width: 100%;
-  gap: 20%;
-  justify-content: center;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
   nav .navbar {
     display: flex;
     list-style: none;
     gap: 25px;
-    margin: 0; }
+    margin: auto; }
+    @media (max-width: 900px) {
+      nav .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 0 0 10px 10px; }
+        nav .navbar.active {
+          display: flex; } }
   nav li a {
-    display: flex;
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
@@ -510,54 +519,608 @@ nav {
   nav .bnav {
     background-color: blue;
     font-size: 1.5rem;
-    font-family: "Oswald", sans-serif;
     color: white;
     border: none;
     border-radius: 10px;
     padding: 5px 10px;
     cursor: pointer;
-    transition: background-color 0.2s; }
+    transition: background-color 0.2s;
+    margin-left: 50px; }
     nav .bnav:hover {
       background-color: #001ec594; }
+    @media (max-width: 900px) {
+      nav .bnav {
+        margin: 15px 0px; } }
 
-@media (max-width: 320px) {
-  .abtUno, .abtTres {
+@media (max-width: 1180px) {
+  .bannerPrincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 10px; }
+    .bannerPrincipal .bannerText {
+      padding: 15px 2.5px 0px 20px; }
+      .bannerPrincipal .bannerText h1 {
+        font-size: 2rem; }
+      .bannerPrincipal .bannerText p {
+        font-size: 0.875rem;
+        padding-bottom: 0px; }
+    .bannerPrincipal .botonPresentacion,
+    .bannerPrincipal .botonServiciosIndex {
+      font-size: 0.625rem; }
+    .bannerPrincipal .imagenPrincipal {
+      margin-right: 10px;
+      padding: 50px; }
+      .bannerPrincipal .imagenPrincipal img {
+        max-width: 450px;
+        min-width: 350px; } }
+
+@media (max-width: 1180px) {
+  .tituloBannerSecundario h2 {
+    font-size: 1.125rem; }
+  .cajasBanner {
+    margin: 0 5vh;
+    font-size: 0.875rem; }
+  .postCaja {
+    margin: 10px 0; }
+    .postCaja button {
+      font-size: 1.125rem; }
+    .postCaja p {
+      font-size: 1.125rem; } }
+
+@media (max-width: 1180px) {
+  .landingFinal {
+    margin: 5vh 5vh 5vh 5vh; }
+    .landingFinal img {
+      max-width: 250px;
+      min-width: 150px;
+      height: auto; }
+    .landingFinal h2 {
+      font-size: 2rem;
+      margin: 2vh 1vh; }
+    .landingFinal p {
+      font-size: 1.125rem;
+      margin: 2vh 1vh; } }
+
+@media (max-width: 1180px) {
+  .contenedorServices {
+    padding: 5vh 4vh;
+    gap: 15px; }
+    .contenedorServices img {
+      max-width: 250px;
+      min-width: 200px;
+      height: auto;
+      border-radius: 15px; }
+    .contenedorServices h1 {
+      font-size: 1.625rem;
+      padding: 0;
+      padding-top: 20px; }
+    .contenedorServices p {
+      font-size: 1.125rem; }
+  .seccionServicesDos {
+    grid-template-columns: 1fr;
+    padding: 10px; }
+    .seccionServicesDos .tituloServ {
+      font-size: 1.625rem; }
+    .seccionServicesDos .subtServ {
+      font-size: 0.875rem; }
+  .card h3 {
+    font-size: 1.125rem; } }
+
+@media (max-width: 1180px) {
+  .abtUno {
+    margin: 50px 50px 0 50px; }
+    .abtUno h3 {
+      font-size: 2rem;
+      padding-right: 10px; }
+    .abtUno p {
+      font-size: 1.125rem;
+      padding-right: 10px; }
+    .abtUno img {
+      max-width: 350px;
+      min-width: 150px;
+      height: auto; }
+  .abtDos {
+    margin-top: 25px; }
+    .abtDos h3 {
+      font-size: 2rem; }
+    .abtDos p {
+      font-size: 1.125rem; }
+    .abtDos img {
+      max-width: 450px;
+      min-width: 225px;
+      height: auto; }
+  .abtTres {
+    margin: 50px 50px;
+    gap: 10%; }
+    .abtTres h3 {
+      font-size: 2rem;
+      padding: 0;
+      margin: 0; }
+    .abtTres p {
+      font-size: 1.125rem;
+      margin: 0;
+      padding-top: 10px; }
+    .abtTres img {
+      max-width: 450px;
+      min-width: 115px;
+      height: auto;
+      margin: 0; } }
+
+@media (max-width: 1180px) {
+  .containerFaqs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "tituloFaqs tituloFaqs" "faqUno faqDos" "faqTres faqCuatro" "faqCinco faqSeis" "faqSiete faqOcho" "faqNueve faqDiez" "faqOnce faqDoce"; } }
+
+@media (max-width: 1180px) {
+  .getInTouchPage .preContainer h1 {
+    font-size: 2rem;
+    text-align: center; }
+  .getInTouchPage .preContainer p {
+    font-size: 1.125rem;
+    padding: 10px 30px;
+    margin: 0; } }
+
+@media (max-width: 790px) {
+  .bannerPrincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 10px; }
+    .bannerPrincipal .bannerText {
+      padding: 20px 5px 0px 40px; }
+      .bannerPrincipal .bannerText h1 {
+        font-size: 1.75rem; }
+      .bannerPrincipal .bannerText p {
+        font-size: 0.875rem;
+        padding-bottom: 0px; }
+    .bannerPrincipal .botonPresentacion,
+    .bannerPrincipal .botonServiciosIndex {
+      font-size: 0.625rem; }
+    .bannerPrincipal .imagenPrincipal {
+      margin-right: 10px;
+      padding: 15px; }
+      .bannerPrincipal .imagenPrincipal al
+img {
+        max-width: 80%;
+        min-width: 20%; } }
+
+@media (max-width: 790px) {
+  .tituloBannerSecundario h2 {
+    font-size: 1.5rem; }
+  .cajasBanner {
+    margin: 0 5vh;
+    font-size: 0.875rem; }
+  .postCaja {
+    margin: 10px 0; }
+    .postCaja button {
+      font-size: 1rem; }
+    .postCaja p {
+      font-size: 0.625rem; } }
+
+@media (max-width: 790px) {
+  .landingFinal {
+    margin: 5vh 5vh 5vh 5vh; }
+    .landingFinal img {
+      max-width: 250px;
+      min-width: 150px;
+      height: auto; }
+    .landingFinal h2 {
+      font-size: 1.75rem;
+      margin: 2vh 1vh; }
+    .landingFinal p {
+      font-size: 1rem;
+      margin: 2vh 1vh; } }
+
+@media (max-width: 790px) {
+  .contenedorServices {
+    padding: 5vh 4vh;
+    gap: 15px; }
+    .contenedorServices img {
+      max-width: 250px;
+      min-width: 200px;
+      height: auto;
+      border-radius: 15px; }
+    .contenedorServices h1 {
+      font-size: 1.25rem;
+      padding: 0;
+      padding-top: 20px; }
+    .contenedorServices p {
+      font-size: 1rem; }
+  .seccionServicesDos {
+    grid-template-columns: 1fr;
+    padding: 10px; }
+    .seccionServicesDos .tituloServ {
+      font-size: 2.5rem; }
+    .seccionServicesDos .subtServ {
+      font-size: 16px; }
+  .card h3 {
+    font-size: 1rem; } }
+
+@media (max-width: 790px) {
+  .abtUno {
+    margin: 50px 50px 0 50px; }
+    .abtUno h3 {
+      font-size: 1.75rem;
+      padding-right: 10px; }
+    .abtUno p {
+      font-size: 1rem;
+      padding-right: 10px; }
+    .abtUno img {
+      max-width: 250px;
+      min-width: 180px; }
+  .abtDos {
+    margin-top: 25px; }
+    .abtDos h3 {
+      font-size: 1.75rem; }
+    .abtDos p {
+      font-size: 1rem; }
+    .abtDos img {
+      max-width: 400px;
+      min-width: 250px;
+      height: auto; }
+  .abtTres {
+    margin: 50px 50px;
+    gap: 10%; }
+    .abtTres h3 {
+      font-size: 1.75rem;
+      padding: 0;
+      margin: 0; }
+    .abtTres p {
+      font-size: 1rem;
+      margin: 0;
+      padding-top: 10px; }
+    .abtTres img {
+      max-width: 225px;
+      min-width: 120px;
+      height: auto; } }
+
+@media (max-width: 790px) {
+  .containerFaqs {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "tituloFaqs tituloFaqs" "faqUno faqDos" "faqTres faqCuatro" "faqCinco faqSeis" "faqSiete faqOcho" "faqNueve faqDiez" "faqOnce faqDoce"; } }
+
+@media (max-width: 790px) {
+  .getInTouchPage .preContainer h1 {
+    font-size: 1.75rem;
+    text-align: center; }
+  .getInTouchPage .preContainer p {
+    font-size: 1rem;
+    padding: 10px 30px;
+    margin: 0; } }
+
+@media (max-width: 635px) {
+  .bannerPrincipal {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin: 10px; }
-  .abtUno h1, .abtUno p,
-  .abtTres h1, .abtTres p {
-    text-align: center;
-    padding: 0;
-    margin: 0; }
-  .abtDos img, .abtTres img {
-    width: 100%;
-    height: auto;
-    margin: 0 auto; } }
+    gap: 0;
+    padding: 1vh;
+    margin: 0;
+    align-items: center;
+    text-align: center; }
+    .bannerPrincipal .imagenPrincipal {
+      order: 2;
+      width: 100%;
+      margin: 0; }
+      .bannerPrincipal .imagenPrincipal img {
+        max-width: 300px;
+        min-width: 150px;
+        height: auto; }
+    .bannerPrincipal .bannerText {
+      width: 100%;
+      height: auto;
+      padding: 10px 5px; }
+      .bannerPrincipal .bannerText h1 {
+        font-size: 1.5rem;
+        align-self: center;
+        margin: 0;
+        margin-bottom: 10px; }
+      .bannerPrincipal .bannerText p {
+        font-size: 0.875rem;
+        padding-bottom: 0;
+        margin: 0; }
+    .bannerPrincipal .botonPresentacion,
+    .bannerPrincipal .botonServiciosIndex {
+      font-size: 0.875rem; }
+  .tituloBannerSecundario {
+    margin-top: 0; }
+    .tituloBannerSecundario h2 {
+      font-size: 1.125rem; }
+  .cajasBanner {
+    flex-direction: column;
+    align-items: center; }
+  .postCaja p {
+    padding: 15px; }
+  .landingFinal {
+    gap: 20px;
+    flex-direction: column;
+    text-align: center; }
+    .landingFinal img {
+      justify-self: center;
+      max-width: 180px;
+      min-width: 100px;
+      height: auto; }
+    .landingFinal button {
+      font-size: 0.875rem; } }
 
-@media (max-width: 750px) {
+@media (max-width: 635px) {
+  .contenedorServices {
+    padding: 2vh 3vh;
+    gap: 20px; }
+    .contenedorServices img {
+      max-width: 150px;
+      min-width: 50px;
+      height: auto; }
+    .contenedorServices h1 {
+      font-size: 0.875rem;
+      padding: 0;
+      padding-top: 5px; }
+    .contenedorServices p {
+      font-size: 0.75rem;
+      padding-top: 5px; } }
+
+@media (max-width: 635px) {
   .abtUno {
+    display: flex;
     flex-direction: column;
-    margin: 20px; }
-  .abtUno h1, .abtUno p {
+    margin: 25px 25px 0 25px;
     text-align: center;
-    padding: 0; } }
-
-@media (max-width: 750px) {
-  .abtDos img {
-    width: 90%;
-    height: auto; } }
-
-@media (max-width: 7580px) {
+    align-items: center;
+    gap: 20px; }
+    .abtUno h3 {
+      font-size: 1.5rem;
+      padding: 0px 16px;
+      text-align: center; }
+    .abtUno img {
+      max-width: 180px;
+      min-width: 90px; }
+    .abtUno p {
+      font-size: 0.875rem;
+      padding: 10px 16px;
+      text-align: center; }
+  .abtDos {
+    margin-top: 10px; }
+    .abtDos h3 {
+      font-size: 1.5rem;
+      padding: 0px 16px;
+      text-align: center; }
+    .abtDos p {
+      font-size: 0.875rem;
+      padding: 10px 16px;
+      text-align: center; }
+    .abtDos img {
+      max-width: 250px;
+      min-width: 150px;
+      height: auto; }
   .abtTres {
+    display: flex;
     flex-direction: column;
-    margin: 20px; }
-  .abtTres h1, .abtTres p {
+    margin: 25px;
     text-align: center;
-    padding: 0;
-    margin-right: 0; }
-  .abtTres img {
-    margin-right: 0;
-    width: 90%;
-    height: auto; } }
+    align-items: center;
+    gap: 20px; }
+    .abtTres h3 {
+      font-size: 1.5rem;
+      padding: 0px 16px;
+      text-align: center; }
+    .abtTres img {
+      max-width: 180px;
+      min-width: 90px;
+      margin: 0 auto; }
+    .abtTres p {
+      font-size: 0.875rem;
+      padding: 10px 16px;
+      text-align: center; } }
+
+@media (max-width: 635px) {
+  .containerFaqs {
+    grid-template-columns: 1fr;
+    grid-template-areas: "tituloFaqs" "faqUno" "faqDos" "faqTres" "faqCuatro" "faqCinco" "faqSeis" "faqSiete" "faqOcho" "faqNueve" "faqDiez" "faqOnce" "faqDoce"; } }
+
+@media (max-width: 480px) {
+  .bannerPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 1vh;
+    margin: 0;
+    align-items: center;
+    text-align: center; }
+    .bannerPrincipal .imagenPrincipal {
+      order: 2;
+      width: 100%;
+      margin: 0; }
+      .bannerPrincipal .imagenPrincipal img {
+        max-width: 300px;
+        min-width: 150px;
+        height: auto; }
+    .bannerPrincipal .bannerText {
+      width: 100%;
+      height: auto;
+      padding: 10px 5px; }
+      .bannerPrincipal .bannerText h1 {
+        font-size: 1rem;
+        align-self: center;
+        margin: 0;
+        margin-bottom: 10px; }
+      .bannerPrincipal .bannerText p {
+        font-size: 0.75rem;
+        padding-bottom: 0;
+        margin: 0; }
+    .bannerPrincipal .botonPresentacion,
+    .bannerPrincipal .botonServiciosIndex {
+      font-size: 0.75rem; }
+  .tituloBannerSecundario {
+    margin-top: 0; }
+    .tituloBannerSecundario h2 {
+      font-size: 0.75rem; }
+  .cajasBanner {
+    flex-direction: column;
+    align-items: center; }
+  .postCaja p {
+    padding: 15px; }
+  .landingFinal {
+    gap: 20px;
+    flex-direction: column;
+    text-align: center; }
+    .landingFinal img {
+      justify-self: center;
+      max-width: 180px;
+      min-width: 100px;
+      height: auto; }
+    .landingFinal button {
+      font-size: 0.75rem; } }
+
+@media (max-width: 635px) {
+  .contenedorServices {
+    padding: 2vh 3vh;
+    gap: 20px; }
+    .contenedorServices img {
+      max-width: 150px;
+      min-width: 50px;
+      height: auto; }
+    .contenedorServices h1 {
+      font-size: 0.75rem;
+      padding: 0;
+      padding-top: 5px; }
+    .contenedorServices p {
+      font-size: 0.625rem;
+      padding-top: 5px; } }
+
+@media (max-width: 390px) {
+  .bannerPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 1vh;
+    margin: 0;
+    align-items: center;
+    text-align: center; }
+    .bannerPrincipal .imagenPrincipal {
+      order: 2;
+      width: 100%;
+      margin: 0; }
+      .bannerPrincipal .imagenPrincipal img {
+        max-width: 300px;
+        min-width: 150px;
+        height: auto; }
+    .bannerPrincipal .bannerText {
+      width: 100%;
+      height: auto;
+      padding: 10px 5px; }
+      .bannerPrincipal .bannerText h1 {
+        font-size: 0.875rem;
+        align-self: center;
+        margin: 0;
+        margin-bottom: 10px; }
+      .bannerPrincipal .bannerText p {
+        font-size: 0.625rem;
+        padding-bottom: 0;
+        margin: 0; }
+    .bannerPrincipal .botonPresentacion,
+    .bannerPrincipal .botonServiciosIndex {
+      font-size: 0.625rem; }
+  .tituloBannerSecundario {
+    margin-top: 0; }
+    .tituloBannerSecundario h2 {
+      font-size: 12px; }
+  .cajasBanner {
+    flex-direction: column;
+    align-items: center; }
+  .postCaja p {
+    padding: 15px; }
+  .landingFinal {
+    gap: 20px;
+    flex-direction: column;
+    text-align: center; }
+    .landingFinal img {
+      justify-self: center;
+      max-width: 180px;
+      min-width: 100px;
+      height: auto; }
+    .landingFinal button {
+      font-size: 0.625rem; } }
+
+@media (max-width: 390px) {
+  .contenedorServices {
+    padding: 2vh 3vh;
+    gap: 20px; }
+    .contenedorServices img {
+      max-width: 150px;
+      min-width: 50px;
+      height: auto; }
+    .contenedorServices h1 {
+      font-size: 0.625rem;
+      padding: 0;
+      padding-top: 5px; }
+    .contenedorServices p {
+      font-size: 0.5rem;
+      padding-top: 5px; } }
+
+@media (max-width: 390px) {
+  .abtUno {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 25px 0 25px;
+    text-align: center;
+    align-items: center;
+    gap: 20px; }
+    .abtUno h3 {
+      font-size: 0.875rem;
+      padding: 0px 16px;
+      text-align: center; }
+    .abtUno img {
+      max-width: 180px;
+      min-width: 90px; }
+    .abtUno p {
+      font-size: 0.625rem;
+      padding: 10px 16px;
+      text-align: center; }
+  .abtDos {
+    margin-top: 10px; }
+    .abtDos h3 {
+      font-size: 0.875rem;
+      padding: 0px 16px;
+      text-align: center; }
+    .abtDos p {
+      font-size: 0.625rem;
+      padding: 10px 16px;
+      text-align: center; }
+    .abtDos img {
+      max-width: 250px;
+      min-width: 150px;
+      height: auto; }
+  .abtTres {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    text-align: center;
+    align-items: center;
+    gap: 20px; }
+    .abtTres h3 {
+      font-size: 0.875rem;
+      padding: 0px 16px;
+      text-align: center; }
+    .abtTres img {
+      max-width: 180px;
+      min-width: 90px;
+      margin: 0 auto; }
+    .abtTres p {
+      font-size: 0.625rem;
+      padding: 10px 16px;
+      text-align: center; } }
+
+@media (max-width: 390px) {
+  .containerFaqs {
+    grid-template-columns: 1fr;
+    grid-template-areas: "tituloFaqs" "faqUno" "faqDos" "faqTres" "faqCuatro" "faqCinco" "faqSeis" "faqSiete" "faqOcho" "faqNueve" "faqDiez" "faqOnce" "faqDoce"; } }

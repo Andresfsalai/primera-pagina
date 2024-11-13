@@ -1,43 +1,43 @@
-.landingFinal{
+.landingFinal {
     display: flex;
     justify-content: space-between;
     gap: 5rem;
-    margin: 100px 100px 0px 100px; 
-    color: map-get($colores-sitio , color2 );
+    margin: 11vh 11vh 11vh 11vh;
+    color: map-get($colores-sitio , color2);
 
-    img{
-        border-radius: 50px;
-        width: 100%;
-        height: 75%;
+    img {
+        max-width: 350px;
+        min-width: 250px;
+        height: auto;
         border-radius: 30px;
-        border: map-get($colores-interactivos , color3 );
+        border: 2px solid map-get($colores-interactivos , color3);
     }
 
-    h2{
-        font-size: map-get($fuentes-size , lg );
+    h2 {
+        font-size: map-get($fuentes-size , lg);
         margin-top: 50px;
     }
 
-    p{
+    p {
         padding: 20px 10px 20px 0px;
-        font-size: map-get($fuentes-size , sm );
+        font-size: map-get($fuentes-size , sm);
         font-weight: lighter;
     }
 
-    button{
-        background-color: map-get($colores-sitio , color1 ); 
-        color: map-get($colores-sitio , color2 ); 
+    button {
+        background-color: map-get($colores-sitio , color1);
+        color: map-get($colores-sitio , color2);
         border: none;
         padding: 5px 10px;
         border-radius: 5px;
         cursor: pointer;
         font-family: "Oswald", sans-serif;
         font-weight: .1875rem;
-        font-size: map-get($fuentes-size , sm );
+        font-size: map-get($fuentes-size , sm);
 
-            &:hover{
-                background-color: rgba(0, 30, 197, 0.582);
-            }
+        &:hover {
+            background-color: rgba(0, 30, 197, 0.582);
+        }
     }
 
 }

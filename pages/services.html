@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="From home wiring to commercial lighting, GE Electric offers expert electrical solutions with guaranteed results. Trust us for all your electrical needs."> 
+    <meta name="keywords" content="residential electrical services, commercial electrical services, home wiring, electrical panel upgrades, lighting installation, electrical troubleshooting, circuit repairs, electrical experts"> 
     <title>GE Electric Inc</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
@@ -11,18 +13,23 @@
     <header>
         <div>
             <a href="../index.html">
-                <img src="../assets/images/Logo.png" alt="logoHeader">
+                <img src="../assets/images/Logo.png" alt="This is the logo of the company">
             </a>
         </div>
         <nav>
+            <div class="navbar-toggle" id="navbarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="navbar">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="./faqs.html">FAQs</a></li>
                 <li><a href="./contact.html">Contact Us</a></li>
                 <li><a href="./aboutUs.html">About Us</a></li>
+                <button class="bnav">Get A Quote</button>
             </ul>
-            <button class="bnav">Get A Quote</button>
         </nav>
     </header>
 
@@ -31,41 +38,112 @@
         <div class="contenedorServices">
             <div class="contenedorTextoServices">
                 <h1>ALLWAYS PROVIDING THE BEST SERVICE AND SOLUTIONS</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique voluptas quia blanditiis ad, laudantium eligendi exercitationem sequi aliquid, pariatur eaque ullam unde atque, rerum accusantium asperiores cum. Placeat, ut illo!</p>
+                <p>At GE Electric, we’re committed to delivering the highest quality service and the best electrical solutions for every project. With over a decade of experience, our licensed professionals take pride in providing reliable, safe, and efficient services. Whether it’s a small repair or a large installation, we always strive to exceed expectations with precision and care. You can count on us to get the job done right, every time.</p>
             </div>
             <div>
-                <img class="imagenServicesPage" src="../assets/images/ServicesFirst.jpg" alt="">
+                <img class="imagenServicesPage" src="../assets/images/ServicesFirst.jpg" alt="an image of an electrician mannaging electrical wiring">
             </div>
         </div>
 
         <section class="seccionServicesDos">
             <h2 class="tituloServ">OUR SERVICES</h2>
-            <p class="subtServ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil neque omnis tenetur fugit odit recusandae eaque, sed totam cum possimus rerum architecto dolorum nisi ipsa. Temporibus dolore dolorem libero labore.</p>
+            <p class="subtServ">From residential wiring to commercial lighting and everything in between, GE Electric offers a full range of electrical services designed to meet your needs. Our expert team ensures your electrical systems are safe, efficient, and tailored to your specific requirements.</p>
             
-            <div class="generalServices">
+            <div class="card generalServices">
                 <h3>General Services</h3>
+                <ul class="services-list">
+                    <li>New Construction Wiring</li>
+                    <li>Home Renovation Wiring</li>
+                    <li>New Addition Wiring</li>
+                    <li>New Circuits for microwaves, freezers, washers, dryers, and other appliances</li>
+                    <li>Replacement Light Fixtures</li>
+                    <li>New Dedicated Lines 120 volts / 240 volts</li>
+                    <li>Panel changes / Upgrades / Sub Panels</li>
+                    <li>Breaker & Circuit Replacements</li>
+                    <li>Dimmer Switches and GFI Outlets</li>
+                    <li>Ceiling Fan Installations</li>
+                    <li>Smoke Detectors</li>
+                    <li>Repairing and Troubleshooting Any Code Violation Warnings</li>
+                </ul>
                 <img src="../assets/images/general-services.png" alt="General Services">
             </div>
-            <div class="commercialLights">
+        
+            <div class="card commercialLights">
                 <h3>Commercial Lights</h3>
+                <ul class="services-list">
+                    <li>Warehouse Lighting</li>
+                    <li>Pole Lighting</li>
+                    <li>Sign Lighting</li>
+                </ul>
                 <img src="../assets/images/commercial-lights.png" alt="Commercial Lights">
             </div>
-            <div class="specialLights">
+        
+            <div class="card specialLights">
                 <h3>Special Lights</h3>
+                <ul class="services-list">
+                    <li>Recessed Lights</li>
+                    <li>Chandelier Installations</li>
+                    <li>Pendant Lights / Vanity Lights</li>
+                    <li>Sensor Lights</li>
+                    <li>Landscape Lights</li>
+                </ul>
                 <img src="../assets/images/special-lights.png" alt="Special Lights">
             </div>
-            <div class="otherServices">
+        
+            <div class="card otherServices">
                 <h3>Other Services</h3>
+                <ul class="services-list">
+                    <li>Energy Efficiency Consulting</li>
+                    <li>Backup Power Solutions</li>
+                    <li>Surge Protection Systems</li>
+                </ul>
                 <img src="../assets/images/other-services.png" alt="Other Services">
             </div>
         </section>
         
     </main>
     
-    <footer>
-        
+    <footer class="text-light pt-5 pb-4">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <p>&copy; 2024 GE Electric Inc. All rights reserved. <br> Virginia | Washington D.C <br> Master Electrician</p>
+                    <div>
+                        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../pages/aboutUs.html" class="text-light">Our Story</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Check Our Services</a></li>
+                        <li><a href="../pages/contact.html" class="text-light">Get A Quote</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Email Us</a></li>
+                        <li><a href="#" class="text-light">Our Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="../javascript/java.js"></script>
+
 </body>
 </html>

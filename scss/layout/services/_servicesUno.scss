@@ -1,13 +1,16 @@
 .contenedorServices{
-    padding: 100px 80px;
-    gap: 30px;
+    padding: 12vh 8vh;
+    gap: 50px;
     color: map-get($colores-sitio , color2 );
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(1,1fr);
 
     img{
-        width: 100%;
+        justify-self: center;
+        align-self: center;
+        min-width: 250px;
+        max-width: 350px;
         height: auto;
         border-radius: 30px;
         border: 5px solid map-get($colores-interactivos , color3 );
@@ -15,7 +18,7 @@
 
     h1{
         font-size: map-get($fuentes-size , lg );
-        padding-top: 100px;
+        padding-top: 1vh;
     }
 
     p{

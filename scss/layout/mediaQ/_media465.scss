@@ -1,0 +1,109 @@
+@media (max-width: 480px) {
+    .bannerPrincipal {
+        @include flex(column, center, center, 0);
+        padding: 1vh;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+
+        .imagenPrincipal {
+            order: 2;
+            width: 100%;
+            margin: 0;
+
+            img {
+                max-width: 300px;
+                min-width: 150px;
+                height: auto;
+            }
+        }
+
+        .bannerText {
+            width: 100%;
+            height: auto;
+            padding: 10px 5px;
+
+            h1 {
+                font-size: map-get($fuentes465, lg);
+                align-self: center;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: map-get($fuentes465, sm);
+                padding-bottom: 0;
+                margin: 0;
+            }
+        }
+
+        .botonPresentacion,
+        .botonServiciosIndex {
+            font-size: map-get($fuentes465, sm);
+        }
+    }
+
+    //Index Secundario 
+
+    .tituloBannerSecundario {
+        margin-top: 0;
+        h2{
+            font-size: map-get($fuentes465 , md )
+        }
+    }
+
+    .cajasBanner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .postCaja {
+        p {
+            padding: 15px;
+        }
+    }
+
+    .landingFinal {
+        gap: 20px;
+        flex-direction: column;
+        text-align: center;
+
+        img {
+            justify-self: center;
+            max-width: 180px;
+            min-width: 100px;
+            height: auto;
+        }
+
+        button {
+            font-size: map-get($fuentes465, sm);
+        }
+
+    }
+
+}
+
+@media (max-width: 635px) {
+    .contenedorServices {
+        padding: 2vh 3vh;
+        gap: 20px;
+
+        img {
+            max-width: 150px;
+            min-width: 50px;
+            height: auto;
+        }
+
+        h1 {
+            font-size: map-get($fuentes465, sm);
+            padding: 0;
+            padding-top: 5px;
+        }
+
+        p {
+            font-size: map-get($fuentes465 , xs);
+            padding-top: 5px;
+        }
+
+    }
+}

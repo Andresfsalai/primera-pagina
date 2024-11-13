@@ -1,49 +1,55 @@
-.bannerPrincipal{
+.bannerPrincipal {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0px;
+    padding: 5vh;
+    height: auto;
+    width: 100%;
 
-    .bannerText{
-        color: map-get($colores-sitio , color2 ); 
-        padding: 25px 15px 0px 90px; 
+    .bannerText {
+        width: 50%;
+        height: 100%;
+        color: map-get($colores-sitio, color2);
+        padding: 5vh 3vw 0 3vw;
+        flex: 1; // Ocupa todo el espacio disponible a la izquierda
     }
 
-    h1{
-        font-size: map-get($fuentes-size, lg );
+    h1 {
+        font-size: map-get($fuentes-size, lg);
     }
 
-    p{
-        font-size: map-get($fuentes-size , sm );
-    font-weight: lighter;
-    padding-bottom: 10px;
+    p {
+        font-size: map-get($fuentes-size, sm);
+        font-weight: lighter;
+        padding-bottom: 10px;
     }
 
     .botonPresentacion{
-        background-color: map-get($colores-sitio, color1 );
+        background-color: map-get($colores-sitio, color1);
         color: white;
-        font-size: map-get($fuentes-size , sm );
+        font-size: map-get($fuentes-size, sm);
         font-family: "Oswald", sans-serif;
         padding: 5px 10px;
         margin-top: 10px;
-        border-style: none;
+
+        border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.1s;
 
-        &:hover{
+        &:hover {
             background-color: map-get($colores-interactivos, color1);
         }
     }
 
-    .botonServiciosIndex{
+    .botonServiciosIndex {
         background-color: transparent; 
-        color: map-get($colores-sitio , color2 ); 
+        color: white; 
         font-size: 1.5rem;
         font-family: "Oswald", sans-serif;
         padding: 3px 10px;
         margin-top: 15px;
         margin-left: 10px;
-        border: 2px solid map-get($colores-sitio, color2 ); 
+        border: 2px solid rgb(255, 255, 255); 
         border-radius: 5px; 
         cursor: pointer; 
         transition: background-color 0.2s;
@@ -51,7 +57,18 @@
         &:hover{
             background-color: map-get($colores-interactivos , color2 );
         }
-
     }
 
+    .imagenPrincipal {
+        justify-content: center;
+        align-items: center; 
+        padding-right: 150px;
+        height: 100%; 
+        
+        img {
+            max-width: 600px;
+            min-width: 400px;
+            height: auto; 
+        }
+    }
 }

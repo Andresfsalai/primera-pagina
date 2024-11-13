@@ -1,0 +1,232 @@
+@media (max-width: 1180px) {
+    .bannerPrincipal {
+        @include flex(row, space-between, center, 0);
+        padding: 10px;
+
+
+        .bannerText {
+            padding: 15px 2.5px 0px 20px;
+
+            h1 {
+                font-size: map-get($fuentes1180 , lg);
+            }
+
+            p {
+                font-size: map-get($fuentes1180 , xs);
+                padding-bottom: 0px;
+            }
+        }
+
+        .botonPresentacion,
+        .botonServiciosIndex {
+            font-size: map-get($fuentes320, sm);
+        }
+
+        .imagenPrincipal {
+            margin-right: 10px;
+            padding: 50px;
+
+            img{
+                max-width: 450px;
+                min-width: 350px;
+            }
+        }
+
+    }
+}
+
+//Index Secundario
+@media (max-width: 1180px) {
+    .tituloBannerSecundario {
+        h2 {
+            font-size: map-get($fuentes1180 , sm);
+        }
+    }
+
+    .cajasBanner {
+        margin: 0 5vh;
+        font-size: map-get($fuentes1180, xs);
+    }
+
+    .postCaja {
+        margin: 10px 0;
+
+        button {
+            font-size: map-get($fuentes1180 , sm);
+        }
+
+        p {
+            font-size: map-get($fuentes1180 , sm);
+        }
+    }
+}
+
+//index Final 
+
+@media (max-width: 1180px) {
+    .landingFinal {
+        margin: 5vh 5vh 5vh 5vh;
+
+        img {
+            max-width: 250px;
+            min-width: 150px;
+            height: auto;
+        }
+
+        h2 {
+            font-size: map-get($fuentes1180 , lg);
+            margin: 2vh 1vh;
+        }
+
+        p {
+            font-size: map-get($fuentes1180, sm);
+            margin: 2vh 1vh;
+        }
+    }
+}
+
+// Services Section
+@media (max-width: 1180px) {
+    .contenedorServices {
+        padding: 5vh 4vh;
+        gap: 15px;
+
+        img {
+            max-width: 250px;
+            min-width: 200px;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-size: map-get($fuentes1180 , md);
+            padding: 0;
+            padding-top: 20px;
+        }
+
+        p {
+            font-size: map-get($fuentes1180 , sm);
+        }
+    }
+
+    .seccionServicesDos {
+        grid-template-columns: 1fr; 
+        padding: 10px;
+
+        .tituloServ {
+            font-size: map-get($fuentes1180, md);
+        }
+
+        .subtServ {
+            font-size: map-get($fuentes1180, xs);
+        }
+    }
+
+    .card {
+        h3 {
+            font-size: map-get($fuentes1180 , sm);
+        }
+    }
+}
+
+//About Us Section 
+
+@media (max-width: 1180px) {
+    .abtUno {
+        margin: 50px 50px 0 50px;
+
+        h3 {
+            font-size: map-get($fuentes1180 , lg);
+            padding-right: 10px;
+        }
+
+        p {
+            font-size: map-get($fuentes1180 , sm);
+            padding-right: 10px;
+        }
+
+        img {
+            max-width: 350px;
+            min-width: 150px;
+            height: auto;
+        }
+    }
+
+    .abtDos {
+        margin-top: 25px;
+
+        h3 {
+            font-size: map-get($fuentes1180 , lg);
+        }
+
+        p {
+            font-size: map-get($fuentes1180 , sm);
+        }
+
+        img {
+            max-width: 450px;
+            min-width: 225px;
+            height: auto;
+        }
+    }
+
+    .abtTres {
+        margin: 50px 50px;
+        gap: 10%;
+
+        h3 {
+            font-size: map-get($fuentes1180 , lg);
+            padding: 0;
+            margin: 0;
+        }
+
+        p{
+            font-size: map-get($fuentes1180 , sm );
+            margin:  0;
+            padding-top: 10px;
+        }
+
+        img{
+            max-width: 450px;
+            min-width: 115px;
+            height: auto;
+            margin: 0;
+        }
+    }
+}
+
+// FAQs Section
+
+@media (max-width: 1180px){
+    .containerFaqs{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "tituloFaqs tituloFaqs"
+            "faqUno faqDos"
+            "faqTres faqCuatro"
+            "faqCinco faqSeis"
+            "faqSiete faqOcho"
+            "faqNueve faqDiez"
+            "faqOnce faqDoce";
+    }
+    
+}
+
+//Contact Us Section 
+
+@media (max-width: 1180px){
+    .getInTouchPage{
+        .preContainer{
+            h1{
+                font-size: map-get($fuentes1180 , lg );
+                text-align: center;
+            }
+    
+            p{
+                font-size: map-get($fuentes1180 , sm );
+                padding: 10px 30px;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -2,115 +2,77 @@
     display: grid;
     width: 100%;
     padding: 10px 80px;
-    margin-top: 80px;
+    margin-top: 20px;
     gap: 20px;
     color: map-get($colores-sitio, color2);
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto 1fr 1fr;
-    grid-template-areas: 
-        "tituloServ tituloServ tituloServ tituloServ"
-        "subtServ subtServ subtServ subtServ"
-        "generalServices generalServices commercialLights commercialLights"
-        "specialLights specialLights otherServices otherServices";
+    grid-template-columns: repeat(2, 1fr); // 2 columnas
     justify-content: center;
-    align-items: center;
-
+    align-items: start;
 
     .tituloServ {
-        grid-area: tituloServ;
+        grid-column: 1 / -1; // Para que el título ocupe todo el ancho de la sección
         text-align: center;
         font-size: map-get($fuentes-size, lg);
     }
 
     .subtServ {
-        grid-area: subtServ;
+        grid-column: 1 / -1; // Para que el subtítulo ocupe todo el ancho de la sección
         text-align: center;
         font-size: map-get($fuentes-size, sm);
         font-weight: lighter;
-        padding-bottom: 40px;
+        padding-bottom: 15px;
     }
 
-    .generalServices, 
-    .commercialLights, 
-    .specialLights, 
-    .otherServices {
+    .card {
         background-color: map-get($colores-sitio, color2);
         border-radius: 15px;
         padding: 20px;
         text-align: left;
         position: relative;
         min-height: 300px;
-        @include flex(column,space-between,center,1.875rem);
         display: flex;
-        overflow: hidden; 
-        margin: 0px 50px 0px 50px;
-
-    
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        cursor: pointer;
+        overflow: hidden;
 
         h3 {
             background-color: map-get($colores-sitio, color1);
             color: map-get($colores-sitio, color2);
             padding: 5px 10px;
             border-radius: 5px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: map-get($fuentes-size, sm);
+            font-size: map-get($fuentes-size, md);
             margin: 0;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .services-list {
+            display: none;
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+            width: 100%;
+
+            li {
+                background-color: rgba(0, 0, 0, 0.05);
+                margin-bottom: 5px;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+
+        img {
+            position: absolute;
+            bottom: 0; 
+            right: 0; 
+            width: 50%; 
+            max-width: 185px;
+            height: auto;
+            object-fit: cover;
+            margin: 0;
+            padding: 0;
         }
     }
-
-    .generalServices{
-        img{
-                position: absolute;
-                bottom: -10px; 
-                right: -10px; 
-                width: 40%;
-                height: auto;
-                margin: 0;
-                padding: 0;
-        }
-    }
-
-    .commercialLights{
-        img{
-                position: absolute;
-                bottom: -10px; 
-                right: -10px; 
-                width: 40%;
-                height: auto;
-                margin: 0;
-                padding: 0;
-        }
-    }
-
-    .specialLights{
-        img{
-                position: absolute;
-                bottom: -10px; 
-                right: -10px; 
-                width: 35%;
-                height: auto;
-                margin: 0;
-                padding: 0;
-        }
-    }
-
-    .otherServices{
-        img{
-                position: absolute;
-                bottom: -10px; 
-                right: -10px; 
-                width: 50%;
-                height: auto;
-                margin: 0;
-                padding: 0;
-        }
-    }
-
-    .generalServices { grid-area: generalServices; }
-    .commercialLights { grid-area: commercialLights; }
-    .specialLights { grid-area: specialLights; }
-    .otherServices { grid-area: otherServices; }
-
 }

@@ -1,44 +1,60 @@
 nav {
     display: flex;
+    align-items: center;
     width: 100%;
-    gap: 20%;
-    justify-content: center;
-    align-items: center; 
 
-        .navbar {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-            margin: 0;
-        }
+    .navbar {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+        margin: auto;
 
-        li {
-            a {
-            display: flex;
-            font-size: map-get($fuentes-size, sm );
-            color: map-get($colores-sitio, color2 );
-            text-decoration: none;
-            text-align: center;
+        @media (max-width: 900px) {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 80px; 
+            right: 0;
+            background-color: map-get($colores-sitio, color3);
+            width: 100%;
+            gap: 15px;
+            padding: 20px;
+            border-radius: 0 0 10px 10px;
 
-            &:hover{
-                color: map-get($map: $colores-interactivos, $key: color3 )
+            &.active {
+                display: flex; 
             }
         }
     }
 
-        .bnav {
-            background-color: map-get($colores-sitio, color1);
-            font-size: map-get($fuentes-size, sm );
-            font-family: "Oswald", sans-serif;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            padding: 5px 10px;
-            cursor: pointer;
-            transition: background-color 0.2s;
+    li a {
+        font-size: map-get($fuentes-size, sm);
+        color: map-get($colores-sitio, color2);
+        text-decoration: none;
+        text-align: center;
 
-            &:hover {
-            background-color:map-get($colores-interactivos, color1);
-            }
+        &:hover {
+            color: map-get($colores-interactivos, color3);
         }
     }
+
+    .bnav {
+        background-color: map-get($colores-sitio, color1);
+        font-size: map-get($fuentes-size, sm);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        margin-left: 50px;
+
+        &:hover {
+            background-color: map-get($colores-interactivos, color1);
+        }
+
+        @media (max-width: 900px) {
+            margin: 15px 0px;
+    }
+} 
+}

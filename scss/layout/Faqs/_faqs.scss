@@ -1,99 +1,62 @@
-.containerFaqs{
-    color: map-get($colores-sitio, color2 );
+.containerFaqs {
+    color: map-get($colores-sitio, color2);
     display: grid;
     width: 100%;
     padding: 80px 80px;
     gap: 25px;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
+
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
+        "tituloFaqs tituloFaqs tituloFaqs tituloFaqs"
+        "faqUno faqDos faqTres faqCuatro"
+        "faqCinco faqSeis faqSiete faqOcho"
+        "faqNueve faqDiez faqOnce faqDoce";
 
-    "tituloFaqs tituloFaqs tituloFaqs tituloFaqs"
-    "faqUno faqDos faqTres faqCuatro"
-    "faqCinco faqSeis faqSiete faqOcho"    
-    "faqNueve faqDiez faqOnce faqDoce"
-    ;
-    justify-content: center;
-    align-items: center;
-
-    .tituloFaqs{
-    grid-area: tituloFaqs;
-    text-align: center;
+    .tituloFaqs {
+        grid-area: tituloFaqs;
+        text-align: center;
+        font-size: 4rem;
     }
 
-    .faqUno{
-        grid-area: faqUno;
-    }
-
-    .faqDos{
-        grid-area: faqDos;
-    }
-
-    .faqTres{
-        grid-area: faqTres;
-    }
-
-    .faqCuatro{
-        grid-area: faqCuatro;
-    }
-
-    .faqCinco{
-        grid-area: faqCinco;
-    }
-
-    .faqSeis{
-        grid-area: faqSeis;
-    }
-
-    .faqSiete{
-        grid-area: faqSiete;
-    }
-
-    .faqOcho{
-        grid-area: faqOcho;
-    }
-
-    .faqNueve{
-        grid-area: faqNueve;
-    }
-
-    .faqDiez{
-        grid-area: faqDiez;
-    }
-
-    .faqOnce{
-        grid-area: faqOnce;
-    }
-
-    .faqDoce{
-        grid-area: faqDoce;   
-        }
-
-    .faqUno, .faqDos, .faqTres, .faqCuatro, .faqCinco, .faqSeis, .faqSiete, .faqOcho, .faqNueve,
-    .faqDiez, .faqOnce, .faqDoce{
+    .faq {
         display: flex;
-        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: rgba(19, 19, 19, 0.856);
         font-size: 1.5rem;
-        align-content: center;
-        justify-content: center;
         padding: 20px;
         border-radius: 10px;
+        color: white;
+        min-height: 250px;
+        height: 100%;
+        cursor: pointer; 
 
-            img{
-                width: 25%;
-                height: 100%;
-                padding: 0px 20px 0px 0px;
-            }
+        img {
+            width: 25%;
+            padding-right: 20px;
+        }
 
-        &:hover{
-            background-color: #333; 
+        h3 {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .respuesta {
+            display: none; 
+            margin-top: 10px;
+            text-align: center;
+            font-size: map-get($fuentes-size , xs );
+            font-weight: lighter;
+        }
+
+        &.active .respuesta {
+            display: block; 
+        }
+
+        &:hover {
+            background-color: #333;
             transform: scale(1.05);
         }
     }
 }
-
-
-.tituloFaqs{
-    font-size: 4rem;
-    text-align: center;
-    }
